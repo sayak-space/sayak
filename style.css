@@ -210,15 +210,21 @@ img {
 }
 
 .section-icon svg {
-    width: 30px;
-    height: 30px;
+    display: block;
+    width: 30px !important;
+    height: 30px !important;
 
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2.2;
+    fill: none !important;
+    stroke: #1479e8 !important;
+    stroke-width: 2.2 !important;
 
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+
+.section-icon.person-icon svg {
+    width: 31px !important;
+    height: 31px !important;
 }
 
 
@@ -322,12 +328,13 @@ img {
 }
 
 .research-symbol svg {
-    width: 32px;
-    height: 32px;
+    display: block;
+    width: 32px !important;
+    height: 32px !important;
 
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
+    fill: none !important;
+    stroke: #ffffff !important;
+    stroke-width: 2 !important;
 
     stroke-linecap: round;
     stroke-linejoin: round;
