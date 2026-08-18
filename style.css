@@ -85,7 +85,7 @@ img {
             rgba(3, 10, 22, 0.52) 45%,
             rgba(3, 10, 22, 0.20) 100%
         ),
-        url("images/cover.jpg") center center / cover no-repeat;
+        url("images/cover.png") center center / cover no-repeat;
 
     color: #ffffff;
     overflow: hidden;
