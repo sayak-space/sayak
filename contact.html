@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Sayak Chakraborty</title>
+
+    <meta name="description"
+          content="Contact information and academic profiles of Sayak Chakraborty.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           CONTACT PAGE
+           ===================================================== */
+
+        .page-header {
+            background: #f5f7fa;
+            border-bottom: 1px solid #e1e6ee;
+        }
+
+        .page-header-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 55px 30px;
+        }
+
+        .page-header h1 {
+            margin: 0 0 8px 0;
+
+            color: #17365d;
+
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            margin: 0;
+
+            color: #666666;
+
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           CONTACT LAYOUT
+           ===================================================== */
+
+        .contact-layout {
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 45px;
+
+            margin-top: 10px;
+        }
+
+
+        .contact-block {
+
+            padding: 30px;
+
+            background: #ffffff;
+
+            border: 1px solid #e0e6ee;
+
+            border-radius: 8px;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.035);
+
+        }
+
+
+        .contact-block h2 {
+
+            margin: 0 0 22px 0;
+
+            color: #17365d;
+
+            font-size: 24px;
+
+        }
+
+
+        /* =====================================================
+           CONTACT DETAILS
+           ===================================================== */
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 16px;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .contact-icon {
+
+            width: 42px;
+            height: 42px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #17365d;
+
+            color: #ffffff;
+
+        }
+
+
+        .contact-icon svg {
+
+            width: 21px;
+            height: 21px;
+
+            fill: none;
+
+            stroke: currentColor;
+
+            stroke-width: 2;
+
+            stroke-linecap: round;
+
+            stroke-linejoin: round;
+
+        }
+
+
+        .contact-item strong {
+
+            display: block;
+
+            margin-bottom: 2px;
+
+            color: #333333;
+
+            font-size: 15px;
+
+        }
+
+
+        .contact-item span,
+        .contact-item a {
+
+            color: #555555;
+
+            font-size: 16px;
+
+        }
+
+
+        .contact-item a {
+
+            color: #1479e8;
+
+        }
+
+
+        .contact-item a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =====================================================
+           AFFILIATION
+           ===================================================== */
+
+        .affiliation {
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            background: #f5f8fc;
+
+            border-left: 4px solid #17365d;
+
+        }
+
+
+        .affiliation strong {
+
+            color: #17365d;
+
+        }
+
+
+        .affiliation p {
+
+            margin: 7px 0 0 0;
+
+            color: #555555;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           PROFILE LINKS
+           ===================================================== */
+
+        .contact-profile-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+        }
+
+
+        .contact-profile {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 12px 15px;
+
+            border: 1px solid #e0e6ee;
+
+            border-radius: 6px;
+
+            color: #333333;
+
+            background: #ffffff;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+
+        }
+
+
+        .contact-profile:hover {
+
+            background: #f5f8fc;
+
+            border-color: #a9bdd3;
+
+            transform: translateX(3px);
+
+        }
+
+
+        .contact-profile img {
+
+            width: 23px;
+            height: 23px;
+
+        }
+
+
+        .contact-profile svg {
+
+            width: 23px;
+            height: 23px;
+
+            flex-shrink: 0;
+
+        }
+
+
+        /* =====================================================
+           CONTACT NOTE
+           ===================================================== */
+
+        .contact-note {
+
+            margin-top: 50px;
+
+            padding: 28px;
+
+            background: #f7f9fc;
+
+            border-top: 2px solid #d9e2f3;
+
+        }
+
+
+        .contact-note h2 {
+
+            margin: 0 0 10px 0;
+
+            color: #17365d;
+
+            font-size: 23px;
+
+        }
+
+
+        .contact-note p {
+
+            margin: 0;
+
+            color: #555555;
+
+            font-size: 16px;
+
+            line-height: 1.75;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 750px) {
+
+            .contact-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .page-header-container {
+
+                padding-left: 20px;
+                padding-right: 20px;
+
+            }
+
+            .page-header h1 {
+
+                font-size: 34px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html"
+               class="site-name">
+
+                Sayak Chakraborty
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="about.html">About</a>
+
+                <a href="research.html">Research</a>
+
+                <a href="publications.html">Publications</a>
+
+                <a href="blog.html">Research Blog</a>
+
+                <a href="cv.html">CV</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         PAGE HEADER
+         ===================================================== -->
+
+    <header class="page-header">
+
+        <div class="page-header-container">
+
+            <h1>Contact</h1>
+
+            <p>
+                Academic and professional contact information
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-container">
+
+
+        <div class="contact-layout">
+
+
+            <!-- =================================================
+                 CONTACT INFORMATION
+                 ================================================= -->
+
+            <section class="contact-block">
+
+                <h2>Contact Information</h2>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <rect x="3"
+                                  y="5"
+                                  width="18"
+                                  height="14"
+                                  rx="2"/>
+
+                            <path d="M3 7l9 6 9-6"/>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>Email</strong>
+
+                        <a href="mailto:sayak.kolkata@gmail.com">
+
+                            sayak.kolkata@gmail.com
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M6 3h4l2 5-3 2c1.8 3.5 4.5 5.2 8 6l2-3 4 2v4c0 1-1 2-2 2C11 21 3 13 3 5c0-1 1-2 3-2z"/>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>Phone</strong>
+
+                        <a href="tel:+918609995441">
+
+                            +91 8609995441
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INSTITUTION -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M3 21h18"/>
+
+                            <path d="M5 21V8l7-4 7 4v13"/>
+
+                            <path d="M9 21v-5h6v5"/>
+
+                            <path d="M9 11h1"/>
+                            <path d="M14 11h1"/>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>Current Affiliation</strong>
+
+                        <span>
+
+                            Aditya-L1 Support Cell<br>
+
+                            Aryabhatta Research Institute of
+                            Observational Sciences (ARIES)
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/>
+
+                            <circle cx="12"
+                                    cy="9"
+                                    r="2.5"/>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>Location</strong>
+
+                        <span>
+                            Nainital, Uttarakhand, India
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="affiliation">
+
+                    <strong>
+                        Academic Enquiries
+                    </strong>
+
+                    <p>
+                        For research collaborations, academic
+                        discussions, invitations and other
+                        professional enquiries, please feel free
+                        to get in touch by email.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACADEMIC PROFILES
+                 ================================================= -->
+
+            <section class="contact-block">
+
+                <h2>Academic Profiles</h2>
+
+
+                <div class="contact-profile-links">
+
+
+                    <!-- ORCID -->
+
+                    <a href="https://orcid.org/0000-0002-7859-5978"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-profile">
+
+                        <img src="https://cdn.simpleicons.org/orcid"
+                             alt="ORCID">
+
+                        <span>ORCID</span>
+
+                    </a>
+
+
+
+                    <!-- GOOGLE SCHOLAR -->
+
+                    <a href="https://scholar.google.com/citations?user=4RLB9B8AAAAJ&hl=en"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-profile">
+
+                        <img src="https://cdn.simpleicons.org/googlescholar"
+                             alt="Google Scholar">
+
+                        <span>Google Scholar</span>
+
+                    </a>
+
+
+
+                    <!-- RESEARCHGATE -->
+
+                    <a href="https://www.researchgate.net/profile/Sayak-Chakraborty-8"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-profile">
+
+                        <img src="https://cdn.simpleicons.org/researchgate"
+                             alt="ResearchGate">
+
+                        <span>ResearchGate</span>
+
+                    </a>
+
+
+
+                    <!-- LINKEDIN -->
+
+                    <a href="https://www.linkedin.com/in/sayak-chakraborty-space"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-profile">
+
+                        <svg viewBox="0 0 24 24"
+                             aria-hidden="true"
+                             style="fill:#0a66c2;">
+
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3zM5.34 7.41a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.56 8.98h3.56v11.47H3.56V8.98z"/>
+
+                        </svg>
+
+                        <span>LinkedIn</span>
+
+                    </a>
+
+
+
+                    <!-- GITHUB -->
+
+                    <a href="https://github.com/sayak-space"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-profile">
+
+                        <img src="https://cdn.simpleicons.org/github"
+                             alt="GitHub">
+
+                        <span>GitHub</span>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             CONTACT NOTE
+             ===================================================== -->
+
+        <section class="contact-note">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+
+                I am open to discussions on ionospheric physics,
+                solar–terrestrial interactions, VLF remote sensing,
+                space weather, theoretical modelling and related
+                areas of space physics. I welcome opportunities for
+                scientific collaboration and exchange of ideas.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 Sayak Chakraborty
+            </p>
+
+            <p>
+                Space Physics · Ionospheric Science · Solar–Terrestrial Physics
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
