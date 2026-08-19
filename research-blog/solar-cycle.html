@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        The Solar Cycle | Sayak Chakraborty
+    </title>
+
+    <meta name="description"
+          content="An introduction to the solar cycle, sunspot number, solar magnetic activity and its influence on space weather and Earth's upper atmosphere.">
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+
+        /* =====================================================
+           ARTICLE HEADER
+           ===================================================== */
+
+        .article-header {
+            background: #f5f7fa;
+            border-bottom: 1px solid #e1e6ee;
+        }
+
+
+        .article-header-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+
+        .article-category {
+            margin-bottom: 10px;
+
+            color: #1479e8;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.6px;
+        }
+
+
+        .article-header h1 {
+            margin: 0 0 15px 0;
+
+            color: #17365d;
+
+            font-size: 42px;
+
+            line-height: 1.25;
+
+            font-weight: 600;
+        }
+
+
+        .article-header p {
+            max-width: 800px;
+
+            margin: 0;
+
+            color: #666666;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           ARTICLE BODY
+           ===================================================== */
+
+        .article-container {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 55px 30px 80px 30px;
+        }
+
+
+        .article-body {
+            color: #3f3f3f;
+
+            font-size: 16px;
+
+            line-height: 1.85;
+        }
+
+
+        .article-body p {
+            margin: 0 0 22px 0;
+        }
+
+
+        .article-body h2 {
+            margin: 50px 0 20px 0;
+
+            padding-bottom: 9px;
+
+            border-bottom: 2px solid #d9e2f3;
+
+            color: #17365d;
+
+            font-size: 29px;
+
+            line-height: 1.35;
+        }
+
+
+        .article-body h3 {
+            margin: 34px 0 13px 0;
+
+            color: #17365d;
+
+            font-size: 21px;
+        }
+
+
+        .article-body strong {
+            color: #303030;
+        }
+
+
+        /* =====================================================
+           HIGHLIGHT BOX
+           ===================================================== */
+
+        .article-highlight {
+            margin: 35px 0 42px 0;
+
+            padding: 30px 32px;
+
+            background: #f7f9fc;
+
+            border-left: 5px solid #1479e8;
+
+            border-radius: 5px;
+        }
+
+
+        .article-highlight p {
+            margin: 0;
+
+            color: #17365d;
+
+            font-size: 20px;
+
+            line-height: 1.65;
+
+            font-weight: 500;
+        }
+
+
+        /* =====================================================
+           SOLAR CYCLE PHASES
+           ===================================================== */
+
+        .cycle-phases {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 20px;
+
+            margin: 35px 0 45px 0;
+        }
+
+
+        .cycle-phase {
+
+            padding: 25px;
+
+            background: #fafbfd;
+
+            border: 1px solid #e1e6ee;
+
+            border-radius: 6px;
+        }
+
+
+        .cycle-phase h3 {
+
+            margin: 0 0 10px 0;
+
+            color: #17365d;
+
+            font-size: 20px;
+        }
+
+
+        .cycle-phase p {
+
+            margin: 0;
+
+            color: #666666;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           EQUATION
+           ===================================================== */
+
+        .equation {
+
+            margin: 30px 0;
+
+            padding: 22px;
+
+            overflow-x: auto;
+
+            text-align: center;
+
+            background: #f7f9fc;
+
+            border-left: 3px solid #d9e2f3;
+
+            border-radius: 4px;
+
+            font-size: 19px;
+        }
+
+
+        /* =====================================================
+           FIGURE
+           ===================================================== */
+
+        .article-figure {
+
+            margin: 40px auto 45px auto;
+
+            text-align: center;
+        }
+
+
+        .article-figure img {
+
+            display: block;
+
+            width: 100%;
+
+            max-width: 850px;
+
+            height: auto;
+
+            margin: 0 auto;
+
+            border: 1px solid #dfe5ec;
+
+            border-radius: 6px;
+
+            background: #ffffff;
+        }
+
+
+        .article-figure figcaption {
+
+            max-width: 750px;
+
+            margin: 12px auto 0 auto;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           NOTE BOX
+           ===================================================== */
+
+        .article-note {
+
+            margin: 35px 0;
+
+            padding: 22px 25px;
+
+            background: #f7f9fc;
+
+            border-left: 4px solid #1479e8;
+
+            border-radius: 5px;
+
+            color: #555555;
+
+            font-size: 15px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           CITATION
+           ===================================================== */
+
+        .citation {
+
+            color: #777777;
+
+            font-size: 0.9em;
+
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           REFERENCE
+           ===================================================== */
+
+        .reference {
+
+            margin-top: 20px;
+
+            padding: 22px 25px;
+
+            background: #fafbfd;
+
+            border: 1px solid #e1e6ee;
+
+            border-radius: 5px;
+
+        }
+
+
+        .reference p {
+
+            margin: 0;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            color: #555555;
+        }
+
+
+        /* =====================================================
+           BACK LINK
+           ===================================================== */
+
+        .article-back {
+
+            margin-top: 60px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #e1e6ee;
+        }
+
+
+        .article-back a {
+
+            color: #1479e8;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+
+        .article-back a:hover {
+
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .cycle-phases {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .article-header-container {
+
+                padding: 45px 20px;
+
+            }
+
+
+            .article-header h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .article-container {
+
+                padding:
+                    40px 20px 60px 20px;
+
+            }
+
+
+            .article-body {
+
+                font-size: 15.5px;
+
+            }
+
+
+            .article-body h2 {
+
+                font-size: 26px;
+
+            }
+
+
+            .article-body h3 {
+
+                font-size: 20px;
+
+            }
+
+
+            .article-highlight {
+
+                padding: 24px;
+
+            }
+
+
+            .article-highlight p {
+
+                font-size: 18px;
+
+            }
+
+
+            .equation {
+
+                font-size: 17px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+
+            <a href="../index.html"
+               class="site-name">
+
+                Sayak Chakraborty
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="../about.html">
+                    About
+                </a>
+
+                <a href="../research.html">
+                    Research
+                </a>
+
+                <a href="../publications.html">
+                    Publications
+                </a>
+
+                <a href="../talks.html">
+                    Talks &amp; Conferences
+                </a>
+
+                <a href="../blog.html">
+                    Blog
+                </a>
+
+                <a href="../cv.html">
+                    CV
+                </a>
+
+                <a href="../contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         ARTICLE HEADER
+         ===================================================== -->
+
+    <header class="article-header">
+
+        <div class="article-header-container">
+
+            <div class="article-category">
+                Research Blog · Solar Physics
+            </div>
+
+
+            <h1>
+                The Solar Cycle
+            </h1>
+
+
+            <p>
+                Understanding the approximately eleven-year rhythm
+                of the Sun's magnetic activity and its influence on
+                the near-Earth space environment.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         ARTICLE CONTENT
+         ===================================================== -->
+
+    <main class="article-container">
+
+        <article class="article-body">
+
+
+            <!-- =================================================
+                 INTRODUCTION
+                 ================================================= -->
+
+            <p>
+
+                The Sun may appear to us as a steady source of light
+                and heat, but its activity is far from constant.
+                One of the most prominent manifestations of this
+                variability is the
+                <strong>solar cycle</strong> — a quasi-periodic
+                variation in the Sun's magnetic activity that is most
+                visibly expressed through changes in the number and
+                distribution of sunspots.
+
+            </p>
+
+
+            <p>
+
+                The solar cycle spans approximately
+                <strong>11 years</strong>. During this period, solar
+                activity gradually increases from a relatively quiet
+                state, known as solar minimum, to a period of enhanced
+                activity known as solar maximum, before declining again
+                towards the next minimum
+                <span class="citation">(Hathaway, 2015)</span>.
+
+            </p>
+
+
+            <p>
+
+                This variability is not limited to sunspots. The
+                solar cycle influences solar radiation output, the
+                occurrence of solar flares and coronal mass ejections,
+                and the structure of the heliospheric magnetic field.
+                Consequently, it has a profound influence on
+                <strong>space weather</strong> and the Earth's upper
+                atmosphere.
+
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+
+                    The solar cycle is essentially the visible
+                    signature of the Sun's constantly evolving
+                    magnetic field.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SOLAR MINIMUM AND MAXIMUM
+                 ================================================= -->
+
+            <h2>
+                From Solar Minimum to Solar Maximum
+            </h2>
+
+
+            <p>
+
+                The solar cycle is commonly described in terms of
+                two broad phases: solar minimum and solar maximum.
+                These are not instantaneous events but represent
+                different stages of the gradual evolution of solar
+                activity.
+
+            </p>
+
+
+            <div class="cycle-phases">
+
+
+                <div class="cycle-phase">
+
+                    <h3>
+                        Solar Minimum
+                    </h3>
+
+                    <p>
+
+                        A relatively quiet phase of the solar cycle,
+                        characterised by a smaller number of sunspots
+                        and generally lower levels of solar activity
+                        and high-energy radiation.
+
+                    </p>
+
+                </div>
+
+
+                <div class="cycle-phase">
+
+                    <h3>
+                        Solar Maximum
+                    </h3>
+
+                    <p>
+
+                        A period of enhanced solar activity, with
+                        increased sunspot numbers, stronger emissions
+                        in UV, EUV and X-ray wavelengths, and a greater
+                        occurrence of energetic solar events.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <p>
+
+                The transition between these phases is gradual, and
+                the duration and strength of individual solar cycles
+                can vary considerably. The solar cycle is therefore
+                better described as quasi-periodic rather than as a
+                perfectly repeating eleven-year clock.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 HISTORY
+                 ================================================= -->
+
+            <h2>
+                How Were Solar Cycles Numbered?
+            </h2>
+
+
+            <p>
+
+                Systematic numbering of solar cycles begins with
+                <strong>Solar Cycle 1</strong>, which is designated
+                as having started in 1755. However, observations of
+                sunspots go back much further.
+
+            </p>
+
+
+            <p>
+
+                Telescopic observations of sunspots began in the early
+                seventeenth century and are associated with pioneering
+                observations by Galileo Galilei and his contemporaries.
+                Regular and quantitative monitoring of solar activity,
+                however, developed more systematically during the
+                eighteenth century.
+
+            </p>
+
+
+            <p>
+
+                The development of a formalised cycle-numbering system
+                was subsequently associated with
+                <strong>Johann Rudolf Wolf</strong> in the nineteenth
+                century. Wolf also developed an empirical measure of
+                solar activity that became known as the
+                <strong>Wolf Sunspot Number</strong>.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 MAGNETIC DYNAMO
+                 ================================================= -->
+
+            <h2>
+                What Drives the Solar Cycle?
+            </h2>
+
+
+            <p>
+
+                The fundamental driver of the solar cycle is believed
+                to be the Sun's
+                <strong>magnetohydrodynamic (MHD) dynamo</strong>.
+                This process involves the generation and regeneration
+                of magnetic fields within the solar interior through
+                the interaction of differential rotation and
+                convective flows.
+
+            </p>
+
+
+            <p>
+
+                The Sun does not rotate as a rigid body. Different
+                regions rotate at different rates, producing
+                differential rotation. In the tachocline — an
+                interface region between the radiative and convective
+                zones — strong shear motions can twist and amplify
+                magnetic fields.
+
+            </p>
+
+
+            <p>
+
+                Eventually, concentrated magnetic flux can emerge
+                through the photosphere. These regions appear as
+                <strong>sunspots</strong>: relatively dark areas on
+                the solar surface associated with strong magnetic
+                fields.
+
+            </p>
+
+
+            <p>
+
+                The strong magnetic fields associated with active
+                regions can also provide the energy reservoir for
+                eruptive phenomena such as solar flares and coronal
+                mass ejections.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 SUNSPOT NUMBER
+                 ================================================= -->
+
+            <h2>
+                Measuring Solar Activity: The Sunspot Number
+            </h2>
+
+
+            <p>
+
+                One of the most widely used observational measures of
+                solar activity is the
+                <strong>Sunspot Number</strong>. It provides a
+                convenient quantitative representation of the changing
+                level of solar activity and forms one of the longest
+                continuous records in solar physics.
+
+            </p>
+
+
+            <p>
+
+                The international sunspot number, historically known
+                as the Wolf Sunspot Number, is expressed through the
+                empirical relation
+
+            </p>
+
+
+            <div class="equation">
+
+                R<sub>s</sub>
+                =
+                k&prime;
+                (10g&prime; + s)
+
+            </div>
+
+
+            <p>
+
+                Here, <strong>R<sub>s</sub></strong> is the sunspot
+                number, <strong>g&prime;</strong> is the number of
+                sunspot groups, <strong>s</strong> is the total number
+                of individual sunspots, and <strong>k&prime;</strong>
+                is a correction factor that accounts for differences
+                between observers, instruments and observing
+                conditions
+                <span class="citation">(Wolf, 1861; Clette et al., 2014)</span>.
+
+            </p>
+
+
+            <p>
+
+                The factor of ten applied to the number of sunspot
+                groups reflects the empirical observation that
+                sunspots frequently occur in groups. The formulation
+                therefore gives greater weight to the number of groups
+                while still accounting for the total number of
+                individual spots.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 FIGURE
+                 ================================================= -->
+
+            <figure class="article-figure">
+
+                <img src="../images/spn.jpg"
+                     alt="Sunspot number progression from Solar Cycle 20 to Solar Cycle 25">
+
+                <figcaption>
+
+                    Sunspot-number progression as a measure of solar
+                    cycle evolution from Solar Cycle 20 to Solar
+                    Cycle 25 (partial). Data courtesy of NASA.
+
+                </figcaption>
+
+            </figure>
+
+
+
+            <!-- =================================================
+                 ACTIVITY THROUGH THE CYCLE
+                 ================================================= -->
+
+            <h2>
+                How Does Solar Activity Change During the Cycle?
+            </h2>
+
+
+            <p>
+
+                During solar maximum, sunspot numbers reach relatively
+                high values. This period is generally accompanied by
+                enhanced emissions in the
+                <strong>ultraviolet (UV)</strong>,
+                <strong>extreme ultraviolet (EUV)</strong> and
+                <strong>X-ray</strong> regions of the electromagnetic
+                spectrum.
+
+            </p>
+
+
+            <p>
+
+                The increased level of solar activity also means that
+                energetic solar events such as flares and coronal mass
+                ejections occur more frequently.
+
+            </p>
+
+
+            <p>
+
+                Solar minimum, in contrast, is characterised by a
+                reduced number of sunspots, lower levels of high-energy
+                solar radiation and a comparatively quieter
+                heliospheric environment.
+
+            </p>
+
+
+            <p>
+
+                Importantly, however, solar activity does not simply
+                repeat itself with identical strength every eleven
+                years. Both the amplitude and duration of individual
+                cycles can vary substantially.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 LONG TERM VARIABILITY
+                 ================================================= -->
+
+            <h2>
+                The Solar Cycle Is Not Perfectly Periodic
+            </h2>
+
+
+            <p>
+
+                Although the average cycle length is approximately
+                eleven years, individual cycles can be shorter or
+                longer. Their amplitudes can also differ significantly.
+
+            </p>
+
+
+            <p>
+
+                Long-term observations of sunspot activity have also
+                revealed periods of unusually low or high solar
+                activity. One of the most famous examples is the
+                <strong>Maunder Minimum</strong>, approximately
+                spanning 1645–1715, during which sunspot activity was
+                exceptionally low.
+
+            </p>
+
+
+            <p>
+
+                Such long-term variations are important because
+                changes in solar activity can influence the radiation
+                environment of the Earth and consequently the
+                behaviour of the upper atmosphere.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 SPACE WEATHER
+                 ================================================= -->
+
+            <h2>
+                Why Does the Solar Cycle Matter to Earth?
+            </h2>
+
+
+            <p>
+
+                The solar cycle is important to Earth because the
+                changing level of solar activity modifies the
+                environment through which the Earth moves.
+
+            </p>
+
+
+            <p>
+
+                During periods of enhanced solar activity, the
+                occurrence of solar flares and CMEs tends to increase.
+                Enhanced solar radiation also modifies the ionisation
+                conditions of the Earth's upper atmosphere.
+
+            </p>
+
+
+            <p>
+
+                These changes can influence the ionosphere, radio-wave
+                propagation, satellite communication, navigation
+                systems and other components of the near-Earth
+                technological environment.
+
+            </p>
+
+
+            <div class="article-note">
+
+                <strong>
+                    Think of the solar cycle as a changing background
+                    level of solar activity.
+                </strong>
+
+                <br><br>
+
+                Individual solar flares and CMEs are short-lived
+                events, but the probability and overall frequency of
+                such events changes as the Sun progresses through its
+                approximately eleven-year cycle.
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SOLAR CYCLE 25
+                 ================================================= -->
+
+            <h2>
+                The Current Solar Cycle
+            </h2>
+
+
+            <p>
+
+                We are currently in
+                <strong>Solar Cycle 25</strong>, which officially
+                began in December 2019. The beginning of the cycle was
+                announced by NASA and NOAA in September 2020.
+
+            </p>
+
+
+            <p>
+
+                Solar Cycle 25 followed the relatively weak Solar
+                Cycle 24. Observations indicate that Cycle 25 has
+                exhibited stronger activity than its predecessor,
+                making it an especially interesting cycle for studies
+                of solar activity and its consequences for the
+                near-Earth environment.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 CONNECTION TO IONOSPHERE
+                 ================================================= -->
+
+            <h2>
+                From the Solar Cycle to the Ionosphere
+            </h2>
+
+
+            <p>
+
+                The solar cycle provides the long-term context within
+                which many of the short-term solar-terrestrial
+                phenomena occur.
+
+            </p>
+
+
+            <p>
+
+                At solar maximum, enhanced solar radiation and a
+                greater frequency of flares and CMEs can produce
+                stronger and more frequent disturbances in the
+                ionosphere. At solar minimum, the ionising radiation
+                environment is generally weaker and the Sun is
+                comparatively quieter.
+
+            </p>
+
+
+            <p>
+
+                This long-term variability is particularly important
+                when studying the ionosphere over many years. A change
+                observed in ionospheric electron density may not
+                necessarily represent a short-term event; it may also
+                reflect the changing background level of solar
+                activity.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 SUMMARY
+                 ================================================= -->
+
+            <h2>
+                In Summary
+            </h2>
+
+
+            <p>
+
+                The solar cycle is an approximately eleven-year,
+                quasi-periodic variation in solar magnetic activity.
+                Sunspots provide one of the most visible and
+                historically important indicators of this cycle.
+
+            </p>
+
+
+            <p>
+
+                Behind the changing sunspot number lies the complex
+                magnetic dynamo operating inside the Sun. As the
+                magnetic field evolves, the Sun's radiation output and
+                its propensity for energetic eruptions also change.
+
+            </p>
+
+
+            <p>
+
+                For Earth, the solar cycle represents a changing
+                space-weather environment. Understanding its
+                behaviour is therefore essential for studying the
+                ionosphere, solar-terrestrial interactions and the
+                broader connection between our planet and its
+                parent star.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 REFERENCES
+                 ================================================= -->
+
+            <h2>
+                References
+            </h2>
+
+
+            <div class="reference">
+
+                <p>
+
+                    Hathaway, D. H. (2015).
+                    <em>
+                        The Solar Cycle.
+                    </em>
+                    Living Reviews in Solar Physics.
+
+                </p>
+
+
+                <p style="margin-top: 15px;">
+
+                    Charbonneau, P. (2010).
+                    <em>
+                        Dynamo models of the solar cycle.
+                    </em>
+
+                </p>
+
+
+                <p style="margin-top: 15px;">
+
+                    Wolf, R. (1861).
+                    Historical development of the sunspot number.
+
+                </p>
+
+
+                <p style="margin-top: 15px;">
+
+                    Clette, F. et al. (2014).
+                    Revisiting the sunspot number.
+
+                </p>
+
+
+                <p style="margin-top: 15px;">
+
+                    Usoskin, I. G. (2007).
+                    <em>
+                        The grand minima of solar activity:
+                        A review of the current understanding.
+                    </em>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BACK TO RESEARCH BLOG
+                 ================================================= -->
+
+            <div class="article-back">
+
+                <a href="../research-blog.html">
+                    ← Back to Research Blog
+                </a>
+
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 Sayak Chakraborty
+            </p>
+
+            <p>
+                Space Physics · Ionospheric Science ·
+                Solar–Terrestrial Physics
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
