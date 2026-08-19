@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Solar Flares and Coronal Mass Ejections | Sayak Chakraborty
+    </title>
+
+    <meta name="description"
+          content="An introduction to solar flares, their classification, terrestrial effects and their relationship with coronal mass ejections.">
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+
+        /* =====================================================
+           ARTICLE HEADER
+           ===================================================== */
+
+        .article-header {
+            background: #f5f7fa;
+            border-bottom: 1px solid #e1e6ee;
+        }
+
+        .article-header-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        .article-category {
+            margin-bottom: 10px;
+            color: #1479e8;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .article-header h1 {
+            margin: 0 0 15px 0;
+            color: #17365d;
+            font-size: 42px;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        .article-header p {
+            max-width: 800px;
+            margin: 0;
+            color: #666666;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           ARTICLE BODY
+           ===================================================== */
+
+        .article-container {
+            max-width: 850px;
+            margin: auto;
+            padding: 55px 30px 80px 30px;
+        }
+
+        .article-body {
+            color: #3f3f3f;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .article-body p {
+            margin: 0 0 22px 0;
+        }
+
+        .article-body h2 {
+            margin: 50px 0 20px 0;
+            padding-bottom: 9px;
+            border-bottom: 2px solid #d9e2f3;
+            color: #17365d;
+            font-size: 29px;
+            line-height: 1.35;
+        }
+
+        .article-body h3 {
+            margin: 34px 0 13px 0;
+            color: #17365d;
+            font-size: 21px;
+        }
+
+        .article-body strong {
+            color: #303030;
+        }
+
+
+        /* =====================================================
+           HIGHLIGHT BOX
+           ===================================================== */
+
+        .article-highlight {
+            margin: 35px 0 42px 0;
+            padding: 30px 32px;
+
+            background: #f7f9fc;
+
+            border-left: 5px solid #1479e8;
+
+            border-radius: 5px;
+        }
+
+        .article-highlight p {
+            margin: 0;
+
+            color: #17365d;
+
+            font-size: 20px;
+
+            line-height: 1.65;
+
+            font-weight: 500;
+        }
+
+
+        /* =====================================================
+           FLARE CLASSIFICATION TABLE
+           ===================================================== */
+
+        .table-wrapper {
+
+            width: 100%;
+
+            overflow-x: auto;
+
+            margin: 35px 0 40px 0;
+
+        }
+
+        .flare-table {
+
+            width: 100%;
+
+            min-width: 680px;
+
+            border-collapse: collapse;
+
+            font-size: 14px;
+
+        }
+
+        .flare-table th {
+
+            padding: 13px 12px;
+
+            background: #17365d;
+
+            color: #ffffff;
+
+            text-align: left;
+
+            font-weight: 600;
+
+            border: 1px solid #d5dce5;
+
+        }
+
+        .flare-table td {
+
+            padding: 13px 12px;
+
+            color: #444444;
+
+            border: 1px solid #d5dce5;
+
+            vertical-align: top;
+
+            line-height: 1.6;
+
+        }
+
+        .flare-table tr:nth-child(even) td {
+
+            background: #f7f9fc;
+
+        }
+
+        .flare-table caption {
+
+            caption-side: bottom;
+
+            margin-top: 12px;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           FIGURE
+           ===================================================== */
+
+        .article-figure {
+
+            margin: 40px auto 45px auto;
+
+            text-align: center;
+
+        }
+
+        .article-figure img {
+
+            display: block;
+
+            width: 100%;
+
+            max-width: 850px;
+
+            height: auto;
+
+            margin: 0 auto;
+
+            border: 1px solid #dfe5ec;
+
+            border-radius: 6px;
+
+            background: #ffffff;
+
+        }
+
+        .article-figure figcaption {
+
+            max-width: 750px;
+
+            margin: 12px auto 0 auto;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           COMPARISON BOX
+           ===================================================== */
+
+        .comparison-box {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 20px;
+
+            margin: 35px 0 45px 0;
+
+        }
+
+        .comparison-item {
+
+            padding: 25px;
+
+            background: #fafbfd;
+
+            border: 1px solid #e1e6ee;
+
+            border-radius: 6px;
+
+        }
+
+        .comparison-item h3 {
+
+            margin: 0 0 10px 0;
+
+            color: #17365d;
+
+            font-size: 20px;
+
+        }
+
+        .comparison-item p {
+
+            margin: 0;
+
+            color: #666666;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           NOTE BOX
+           ===================================================== */
+
+        .article-note {
+
+            margin: 35px 0;
+
+            padding: 22px 25px;
+
+            background: #f7f9fc;
+
+            border-left: 4px solid #1479e8;
+
+            border-radius: 5px;
+
+            color: #555555;
+
+            font-size: 15px;
+
+            line-height: 1.75;
+
+        }
+
+
+        /* =====================================================
+           CITATION
+           ===================================================== */
+
+        .citation {
+
+            color: #777777;
+
+            font-size: 0.9em;
+
+            white-space: nowrap;
+
+        }
+
+
+        /* =====================================================
+           BACK LINK
+           ===================================================== */
+
+        .article-back {
+
+            margin-top: 60px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #e1e6ee;
+
+        }
+
+        .article-back a {
+
+            color: #1479e8;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+        }
+
+        .article-back a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .comparison-box {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .article-header-container {
+
+                padding: 45px 20px;
+
+            }
+
+            .article-header h1 {
+
+                font-size: 34px;
+
+            }
+
+            .article-container {
+
+                padding: 40px 20px 60px 20px;
+
+            }
+
+            .article-body {
+
+                font-size: 15.5px;
+
+            }
+
+            .article-body h2 {
+
+                font-size: 26px;
+
+            }
+
+            .article-body h3 {
+
+                font-size: 20px;
+
+            }
+
+            .article-highlight {
+
+                padding: 24px;
+
+            }
+
+            .article-highlight p {
+
+                font-size: 18px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+
+            <a href="../index.html"
+               class="site-name">
+
+                Sayak Chakraborty
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="../about.html">
+                    About
+                </a>
+
+                <a href="../research.html">
+                    Research
+                </a>
+
+                <a href="../publications.html">
+                    Publications
+                </a>
+
+                <a href="../talks.html">
+                    Talks &amp; Conferences
+                </a>
+
+                <a href="../blog.html">
+                    Blog
+                </a>
+
+                <a href="../cv.html">
+                    CV
+                </a>
+
+                <a href="../contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         ARTICLE HEADER
+         ===================================================== -->
+
+    <header class="article-header">
+
+        <div class="article-header-container">
+
+            <div class="article-category">
+                Research Blog · Solar Physics
+            </div>
+
+
+            <h1>
+                Solar Flares and Coronal Mass Ejections
+            </h1>
+
+
+            <p>
+                Sudden eruptions on the Sun and how they can
+                influence the Earth's ionosphere and near-Earth
+                space environment.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         ARTICLE CONTENT
+         ===================================================== -->
+
+    <main class="article-container">
+
+        <article class="article-body">
+
+
+            <!-- =================================================
+                 INTRODUCTION
+                 ================================================= -->
+
+            <p>
+
+                The Sun is a highly dynamic star. Its magnetic field
+                continuously evolves, stores enormous amounts of
+                energy and occasionally releases that energy through
+                powerful eruptive events. Two of the most important
+                manifestations of solar activity are
+                <strong>solar flares</strong> and
+                <strong>coronal mass ejections (CMEs)</strong>.
+
+            </p>
+
+
+            <p>
+
+                Although both phenomena originate from the Sun and
+                can occur in association with active magnetic regions,
+                they represent different physical processes. Solar
+                flares are characterised primarily by the sudden
+                release of electromagnetic radiation, whereas CMEs
+                involve the expulsion of large quantities of
+                magnetised plasma into interplanetary space.
+
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+
+                    A solar eruption can therefore influence Earth
+                    in more than one way — through the radiation that
+                    reaches our atmosphere and through energetic
+                    particles and magnetised plasma travelling
+                    through interplanetary space.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SOLAR FLARE
+                 ================================================= -->
+
+            <h2>
+                What is a Solar Flare?
+            </h2>
+
+
+            <p>
+
+                Solar flares are sudden and intense releases of
+                electromagnetic radiation from active regions of the
+                Sun. They are usually associated with sunspots and
+                magnetic reconnection in the solar corona.
+
+            </p>
+
+
+            <p>
+
+                A flare can emit radiation across a very broad range
+                of the electromagnetic spectrum, extending from
+                radio waves to X-rays and gamma rays. Among these,
+                enhanced <strong>X-ray</strong> and
+                <strong>extreme ultraviolet (EUV)</strong> radiation
+                are particularly important for the immediate
+                response of the Earth's ionosphere.
+
+            </p>
+
+
+            <p>
+
+                When enhanced solar X-ray and EUV radiation reaches
+                the Earth, it can rapidly increase ionization in the
+                ionosphere. These changes can modify radio-wave
+                propagation and, during sufficiently strong events,
+                lead to phenomena such as shortwave fadeouts and
+                <strong>high-frequency (HF) radio blackouts</strong>.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 FLARE CLASSIFICATION
+                 ================================================= -->
+
+            <h2>
+                How are Solar Flares Classified?
+            </h2>
+
+
+            <p>
+
+                Solar flares are commonly classified according to
+                the peak soft X-ray flux measured near Earth by
+                <strong>GOES</strong> satellites. The three major
+                classes relevant here are C, M and X, with each class
+                representing an increase in the measured X-ray flux
+                by approximately an order of magnitude.
+
+            </p>
+
+
+            <div class="table-wrapper">
+
+                <table class="flare-table">
+
+                    <caption>
+                        Classification of solar flares with typical
+                        energy release, terrestrial effects and
+                        maximum soft X-ray flux.
+                    </caption>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Flare Class
+                            </th>
+
+                            <th>
+                                Energy Released (J)
+                            </th>
+
+                            <th>
+                                Effects on Earth
+                            </th>
+
+                            <th>
+                                Maximum X-ray Flux
+                                (W m<sup>−2</sup>)
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <strong>C-class</strong>
+                            </td>
+
+                            <td>
+                                10<sup>20</sup>–10<sup>21</sup>
+                            </td>
+
+                            <td>
+                                Minor; usually no significant
+                                effects on Earth.
+                            </td>
+
+                            <td>
+                                10<sup>−6</sup> ≤
+                                φ<sub>xr</sub> &lt;
+                                10<sup>−5</sup>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>M-class</strong>
+                            </td>
+
+                            <td>
+                                10<sup>21</sup>–10<sup>22</sup>
+                            </td>
+
+                            <td>
+                                Moderate radio blackouts;
+                                minor radiation storms.
+                            </td>
+
+                            <td>
+                                10<sup>−5</sup> ≤
+                                φ<sub>xr</sub> &lt;
+                                10<sup>−4</sup>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>X-class</strong>
+                            </td>
+
+                            <td>
+                                10<sup>22</sup>–10<sup>25</sup>
+                            </td>
+
+                            <td>
+                                Major radio blackouts;
+                                radiation and geomagnetic storms.
+                            </td>
+
+                            <td>
+                                φ<sub>xr</sub> ≥
+                                10<sup>−4</sup>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 GOES FIGURE
+                 ================================================= -->
+
+            <figure class="article-figure">
+
+                <img src="../images/xr.jpg"
+                     alt="GOES soft X-ray response showing C, M and X class solar flares">
+
+                <figcaption>
+
+                    Soft X-ray response recorded by a GOES satellite
+                    on 8 December 2025, showing C-, M- and X-class
+                    solar flares.
+
+                </figcaption>
+
+            </figure>
+
+
+
+            <!-- =================================================
+                 WHY FLARES MATTER TO IONOSPHERE
+                 ================================================= -->
+
+            <h2>
+                How Do Solar Flares Affect the Ionosphere?
+            </h2>
+
+
+            <p>
+
+                The ionosphere responds rapidly to enhanced solar
+                radiation. In particular, the X-ray and EUV emission
+                associated with a flare can produce additional
+                ionization in the lower ionosphere.
+
+            </p>
+
+
+            <p>
+
+                The response is especially important in the
+                <strong>D-region</strong>, where an increase in
+                electron density can modify the propagation
+                conditions of VLF and LF radio waves.
+
+            </p>
+
+
+            <p>
+
+                This provides an interesting opportunity for
+                ionospheric remote sensing. A solar flare occurs
+                approximately 150 million kilometres away, yet its
+                effect can be detected through changes in radio
+                signals propagating between a transmitter and a
+                receiver on or near the Earth's surface.
+
+            </p>
+
+
+            <div class="article-note">
+
+                <strong>
+                    A remarkable connection:
+                </strong>
+
+                <br><br>
+
+                The X-ray radiation from a solar flare reaches Earth
+                in only about eight minutes. The resulting change in
+                ionization can then produce measurable changes in
+                the lower ionosphere and in sub-ionospheric VLF
+                radio signals.
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CME
+                 ================================================= -->
+
+            <h2>
+                What is a Coronal Mass Ejection?
+            </h2>
+
+
+            <p>
+
+                A <strong>Coronal Mass Ejection (CME)</strong> is a
+                large-scale expulsion of magnetised plasma from the
+                solar corona into the heliosphere.
+
+            </p>
+
+
+            <p>
+
+                Unlike a solar flare, which is primarily an abrupt
+                release of electromagnetic radiation, a CME involves
+                the transport of a large amount of plasma and
+                magnetic field away from the Sun.
+
+            </p>
+
+
+            <p>
+
+                When a CME is directed towards Earth and interacts
+                with the Earth's magnetosphere, it can produce
+                significant geomagnetic disturbances. The resulting
+                geomagnetic storms can have substantial effects on
+                the upper ionosphere and on technological systems.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 CME AND GEOMAGNETIC STORMS
+                 ================================================= -->
+
+            <h2>
+                CMEs and Geomagnetic Storms
+            </h2>
+
+
+            <p>
+
+                The interaction between an Earth-directed CME and
+                the Earth's magnetosphere depends strongly on the
+                magnetic-field configuration of the incoming plasma.
+                In particular, a southward-directed magnetic-field
+                component, commonly represented by
+                <strong>B<sub>z</sub> &lt; 0</strong>, can facilitate
+                stronger coupling between the solar wind and the
+                terrestrial magnetosphere.
+
+            </p>
+
+
+            <p>
+
+                Such interactions can trigger geomagnetic storms,
+                during which the upper ionosphere can undergo
+                substantial changes in electron density and
+                electrodynamic behaviour.
+
+            </p>
+
+
+            <p>
+
+                These disturbances can alter the
+                <strong>F-region</strong> ionosphere and consequently
+                influence the <strong>Total Electron Content (TEC)</strong>.
+                Changes in TEC can affect satellite-based communication
+                and navigation systems, including GNSS and GPS.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 POLAR CAP ABSORPTION
+                 ================================================= -->
+
+            <h2>
+                Energetic Particles and Polar Regions
+            </h2>
+
+
+            <p>
+
+                CMEs and their associated shocks can also accelerate
+                energetic particles. When these particles enter the
+                Earth's atmosphere, particularly in polar regions,
+                they can enhance ionization at lower altitudes.
+
+            </p>
+
+
+            <p>
+
+                Enhanced ionization in the polar ionosphere can
+                increase the absorption of high-frequency radio
+                waves. Such events are known as
+                <strong>Polar Cap Absorption (PCA)</strong> events.
+
+            </p>
+
+
+            <p>
+
+                PCA events demonstrate another important connection
+                between solar activity, energetic particles and
+                terrestrial radio-wave propagation.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 FLARE VS CME
+                 ================================================= -->
+
+            <h2>
+                Solar Flare vs. CME
+            </h2>
+
+
+            <div class="comparison-box">
+
+
+                <div class="comparison-item">
+
+                    <h3>
+                        Solar Flare
+                    </h3>
+
+                    <p>
+
+                        Primarily a sudden release of
+                        electromagnetic radiation associated with
+                        magnetic energy release in the solar corona.
+                        Its X-ray and EUV emissions can produce
+                        rapid ionospheric disturbances.
+
+                    </p>
+
+                </div>
+
+
+                <div class="comparison-item">
+
+                    <h3>
+                        Coronal Mass Ejection
+                    </h3>
+
+                    <p>
+
+                        A large-scale expulsion of magnetised plasma
+                        into the heliosphere. When directed towards
+                        Earth, it can interact with the magnetosphere
+                        and produce geomagnetic storms.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 WHY BOTH ARE IMPORTANT
+                 ================================================= -->
+
+            <h2>
+                Why Are They Important for Space Weather?
+            </h2>
+
+
+            <p>
+
+                Solar flares and CMEs represent two different
+                pathways through which solar activity can influence
+                the Earth's near-space environment.
+
+            </p>
+
+
+            <p>
+
+                Flare radiation can produce an almost immediate
+                response in the ionosphere, particularly through
+                enhanced X-ray and EUV ionization. CMEs, on the other
+                hand, can take much longer to reach Earth and can
+                produce strong geomagnetic disturbances when they
+                interact with the magnetosphere.
+
+            </p>
+
+
+            <p>
+
+                Understanding both phenomena is therefore essential
+                for understanding <strong>space weather</strong> —
+                the changing conditions in space that can affect the
+                Earth's technological environment.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 CONNECTION TO RESEARCH
+                 ================================================= -->
+
+            <div class="article-highlight">
+
+                <p>
+
+                    From the Sun to the ionosphere, a chain of
+                    physical processes connects an eruption on the
+                    solar surface with measurable changes in the
+                    environment around Earth.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SUMMARY
+                 ================================================= -->
+
+            <h2>
+                In Summary
+            </h2>
+
+
+            <p>
+
+                Solar flares and coronal mass ejections are among
+                the most important manifestations of solar activity.
+                While flares primarily release electromagnetic
+                radiation, CMEs transport large amounts of
+                magnetised plasma into the heliosphere.
+
+            </p>
+
+
+            <p>
+
+                Their effects can extend from the ionosphere to the
+                magnetosphere and can influence radio communication,
+                navigation and other space-based technologies.
+
+            </p>
+
+
+            <p>
+
+                For ionospheric researchers, these solar events also
+                provide natural experiments. By observing how the
+                ionosphere responds, we can investigate the physical
+                processes linking solar activity with the Earth's
+                near-space environment.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 REFERENCE
+                 ================================================= -->
+
+            <h2>
+                Reference
+            </h2>
+
+
+            <p>
+
+                Tsurutani et al. (2009).
+                <em>
+                    Global observations of solar flare effects
+                    on the ionosphere.
+                </em>
+
+            </p>
+
+
+            <p>
+
+                Pulkkinen et al. (2007).
+                <em>
+                    Space weather and geomagnetic storm effects.
+                </em>
+
+            </p>
+
+
+            <!-- =================================================
+                 BACK TO RESEARCH BLOG
+                 ================================================= -->
+
+            <div class="article-back">
+
+                <a href="../research-blog.html">
+                    ← Back to Research Blog
+                </a>
+
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 Sayak Chakraborty
+            </p>
+
+            <p>
+                Space Physics · Ionospheric Science ·
+                Solar–Terrestrial Physics
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
