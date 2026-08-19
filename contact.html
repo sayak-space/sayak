@@ -291,8 +291,147 @@
 
 
         /* =====================================================
+           CONTACT FORM
+           ===================================================== */
+
+        .message-block {
+            min-width: 0;
+        }
+
+        .form-intro {
+            margin: -8px 0 22px 0;
+
+            color: #666666;
+
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-field label {
+            color: #333333;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .form-field label span {
+            color: #c43d3d;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+
+            padding: 11px 13px;
+
+            border: 1px solid #d6dde6;
+            border-radius: 5px;
+
+            background: #ffffff;
+
+            color: #333333;
+
+            font-family: inherit;
+            font-size: 15px;
+
+            outline: none;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            border-color: #1479e8;
+
+            box-shadow: 0 0 0 3px rgba(20, 121, 232, 0.10);
+        }
+
+        .form-field textarea {
+            resize: vertical;
+
+            min-height: 150px;
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: #9aa3ad;
+        }
+
+        .form-submit {
+            align-self: flex-start;
+
+            padding: 11px 22px;
+
+            border: none;
+            border-radius: 5px;
+
+            background: #17365d;
+            color: #ffffff;
+
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .form-submit:hover {
+            background: #1479e8;
+
+            transform: translateY(-1px);
+        }
+
+        .form-honeypot {
+            position: absolute !important;
+
+            left: -9999px !important;
+
+            width: 1px !important;
+            height: 1px !important;
+
+            opacity: 0 !important;
+        }
+
+
+        /* =====================================================
+           ACADEMIC PROFILES
+           ===================================================== */
+
+        .profiles-block {
+            margin-top: 35px;
+        }
+
+        .profiles-block .contact-profile-links {
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 12px;
+        }
+
+
+        /* =====================================================
            CONTACT NOTE
            ===================================================== */
+
 
         .contact-note {
 
@@ -353,6 +492,18 @@
             .page-header h1 {
 
                 font-size: 34px;
+
+            }
+
+            .profiles-block .contact-profile-links {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .form-submit {
+
+                width: 100%;
 
             }
 
@@ -433,7 +584,6 @@
 
         <div class="contact-layout">
 
-
             <!-- =================================================
                  CONTACT INFORMATION
                  ================================================= -->
@@ -441,7 +591,6 @@
             <section class="contact-block">
 
                 <h2>Contact Information</h2>
-
 
                 <!-- EMAIL -->
 
@@ -451,11 +600,8 @@
 
                         <svg viewBox="0 0 24 24">
 
-                            <rect x="3"
-                                  y="5"
-                                  width="18"
-                                  height="14"
-                                  rx="2"/>
+                            <rect x="3" y="5"
+                                  width="18" height="14" rx="2"/>
 
                             <path d="M3 7l9 6 9-6"/>
 
@@ -463,52 +609,17 @@
 
                     </div>
 
-
                     <div>
 
                         <strong>Email</strong>
 
                         <a href="mailto:sayak.kolkata@gmail.com">
-
                             sayak.kolkata@gmail.com
-
                         </a>
 
                     </div>
 
                 </div>
-
-
-
-                <!-- PHONE -->
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-
-                        <svg viewBox="0 0 24 24">
-
-                            <path d="M6 3h4l2 5-3 2c1.8 3.5 4.5 5.2 8 6l2-3 4 2v4c0 1-1 2-2 2C11 21 3 13 3 5c0-1 1-2 3-2z"/>
-
-                        </svg>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>Phone</strong>
-
-                        <a href="tel:+918609995441">
-
-                            +91 8609995441
-
-                        </a>
-
-                    </div>
-
-                </div>
-
 
 
                 <!-- INSTITUTION -->
@@ -520,11 +631,8 @@
                         <svg viewBox="0 0 24 24">
 
                             <path d="M3 21h18"/>
-
                             <path d="M5 21V8l7-4 7 4v13"/>
-
                             <path d="M9 21v-5h6v5"/>
-
                             <path d="M9 11h1"/>
                             <path d="M14 11h1"/>
 
@@ -532,24 +640,19 @@
 
                     </div>
 
-
                     <div>
 
                         <strong>Current Affiliation</strong>
 
                         <span>
-
                             Aditya-L1 Support Cell<br>
-
                             Aryabhatta Research Institute of
                             Observational Sciences (ARIES)
-
                         </span>
 
                     </div>
 
                 </div>
-
 
 
                 <!-- LOCATION -->
@@ -561,15 +664,11 @@
                         <svg viewBox="0 0 24 24">
 
                             <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/>
-
-                            <circle cx="12"
-                                    cy="9"
-                                    r="2.5"/>
+                            <circle cx="12" cy="9" r="2.5"/>
 
                         </svg>
 
                     </div>
-
 
                     <div>
 
@@ -586,127 +685,226 @@
 
                 <div class="affiliation">
 
-                    <strong>
-                        Academic Enquiries
-                    </strong>
+                    <strong>Academic Enquiries</strong>
 
                     <p>
                         For research collaborations, academic
                         discussions, invitations and other
-                        professional enquiries, please feel free
-                        to get in touch by email.
+                        professional enquiries, you can use the
+                        contact form or email me directly.
                     </p>
 
                 </div>
 
-
             </section>
-
 
 
             <!-- =================================================
-                 ACADEMIC PROFILES
+                 CONTACT FORM
                  ================================================= -->
 
-            <section class="contact-block">
+            <section class="contact-block message-block">
 
-                <h2>Academic Profiles</h2>
+                <h2>Send a Message</h2>
 
+                <p class="form-intro">
+                    Please use the form below to get in touch.
+                    Your message will be forwarded to my email.
+                </p>
 
-                <div class="contact-profile-links">
+                <!--
+                    IMPORTANT:
+                    Replace YOUR_FORM_ID with the Formspree form ID
+                    after creating your form at Formspree.
+                -->
 
+                <form
+                    action="https://formspree.io/f/mwlewjry"
+                    method="POST"
+                    class="contact-form">
 
-                    <!-- ORCID -->
+                    <div class="form-field">
 
-                    <a href="https://orcid.org/0000-0002-7859-5978"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-profile">
+                        <label for="name">Name <span>*</span></label>
 
-                        <img src="https://cdn.simpleicons.org/orcid"
-                             alt="ORCID">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required>
 
-                        <span>ORCID</span>
-
-                    </a>
-
-
-
-                    <!-- GOOGLE SCHOLAR -->
-
-                    <a href="https://scholar.google.com/citations?user=4RLB9B8AAAAJ&hl=en"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-profile">
-
-                        <img src="https://cdn.simpleicons.org/googlescholar"
-                             alt="Google Scholar">
-
-                        <span>Google Scholar</span>
-
-                    </a>
+                    </div>
 
 
+                    <div class="form-field">
 
-                    <!-- RESEARCHGATE -->
+                        <label for="affiliation">Affiliation <span>*</span></label>
 
-                    <a href="https://www.researchgate.net/profile/Sayak-Chakraborty-8"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-profile">
+                        <input
+                            type="text"
+                            id="affiliation"
+                            name="affiliation"
+                            placeholder="University / Institute / Organisation"
+                            required>
 
-                        <img src="https://cdn.simpleicons.org/researchgate"
-                             alt="ResearchGate">
-
-                        <span>ResearchGate</span>
-
-                    </a>
+                    </div>
 
 
+                    <div class="form-field">
 
-                    <!-- LINKEDIN -->
+                        <label for="email">Email <span>*</span></label>
 
-                    <a href="https://www.linkedin.com/in/sayak-chakraborty-space"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-profile">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email address"
+                            required>
 
-                        <svg viewBox="0 0 24 24"
-                             aria-hidden="true"
-                             style="fill:#0a66c2;">
-
-                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3zM5.34 7.41a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.56 8.98h3.56v11.47H3.56V8.98z"/>
-
-                        </svg>
-
-                        <span>LinkedIn</span>
-
-                    </a>
+                    </div>
 
 
+                    <div class="form-field">
 
-                    <!-- GITHUB -->
+                        <label for="subject">Subject <span>*</span></label>
 
-                    <a href="https://github.com/sayak-space"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-profile">
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Subject of your message"
+                            required>
 
-                        <img src="https://cdn.simpleicons.org/github"
-                             alt="GitHub">
-
-                        <span>GitHub</span>
-
-                    </a>
+                    </div>
 
 
-                </div>
+                    <div class="form-field">
+
+                        <label for="message">Message <span>*</span></label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="7"
+                            placeholder="Write your message here..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <!-- Helps Formspree filter simple bots -->
+                    <input
+                        type="text"
+                        name="_gotcha"
+                        class="form-honeypot"
+                        tabindex="-1"
+                        autocomplete="off">
+
+
+                    <button type="submit" class="form-submit">
+                        Send Message
+                    </button>
+
+                </form>
 
             </section>
 
-
         </div>
 
+
+        <!-- =================================================
+             ACADEMIC PROFILES
+             ================================================= -->
+
+        <section class="contact-block profiles-block">
+
+            <h2>Academic Profiles</h2>
+
+            <div class="contact-profile-links">
+
+                <!-- ORCID -->
+
+                <a href="https://orcid.org/0000-0002-7859-5978"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-profile">
+
+                    <img src="https://cdn.simpleicons.org/orcid"
+                         alt="ORCID">
+
+                    <span>ORCID</span>
+
+                </a>
+
+
+                <!-- GOOGLE SCHOLAR -->
+
+                <a href="https://scholar.google.com/citations?user=4RLB9B8AAAAJ&hl=en"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-profile">
+
+                    <img src="https://cdn.simpleicons.org/googlescholar"
+                         alt="Google Scholar">
+
+                    <span>Google Scholar</span>
+
+                </a>
+
+
+                <!-- RESEARCHGATE -->
+
+                <a href="https://www.researchgate.net/profile/Sayak-Chakraborty-8"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-profile">
+
+                    <img src="https://cdn.simpleicons.org/researchgate"
+                         alt="ResearchGate">
+
+                    <span>ResearchGate</span>
+
+                </a>
+
+
+                <!-- LINKEDIN -->
+
+                <a href="https://www.linkedin.com/in/sayak-chakraborty-space"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-profile">
+
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true"
+                         style="fill:#0a66c2;">
+
+                        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3zM5.34 7.41a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0-4.14zM3.56 8.98h3.56v11.47H3.56V8.98z"/>
+
+                    </svg>
+
+                    <span>LinkedIn</span>
+
+                </a>
+
+
+                <!-- GITHUB -->
+
+                <a href="https://github.com/sayak-space"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-profile">
+
+                    <img src="https://cdn.simpleicons.org/github"
+                         alt="GitHub">
+
+                    <span>GitHub</span>
+
+                </a>
+
+            </div>
+
+        </section>
 
 
         <!-- =====================================================
