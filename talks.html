@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Talks &amp; Conferences | Sayak Chakraborty</title>
+
+    <meta name="description"
+          content="Conference presentations, invited talks, posters and scientific events attended by Sayak Chakraborty.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           TALKS & CONFERENCES PAGE
+           ===================================================== */
+
+        .page-header {
+            background: #f5f7fa;
+            border-bottom: 1px solid #e1e6ee;
+        }
+
+
+        .page-header-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 55px 30px;
+        }
+
+
+        .page-header h1 {
+            margin: 0 0 8px 0;
+
+            color: #17365d;
+
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+
+        .page-header p {
+            margin: 0;
+
+            color: #666666;
+
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           INTRODUCTION
+           ===================================================== */
+
+        .talks-intro {
+            margin-bottom: 50px;
+        }
+
+
+        .talks-intro p {
+            max-width: 900px;
+
+            margin: 0;
+
+            color: #555555;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           EVENT
+           ===================================================== */
+
+        .event {
+            margin-bottom: 65px;
+
+            padding-bottom: 50px;
+
+            border-bottom: 1px solid #e1e6ee;
+        }
+
+
+        .event:last-child {
+            border-bottom: none;
+        }
+
+
+        .event-header {
+            margin-bottom: 22px;
+        }
+
+
+        .event-year {
+            display: inline-block;
+
+            margin-bottom: 7px;
+
+            color: #1479e8;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        .event-title {
+            margin: 0 0 8px 0;
+
+            color: #17365d;
+
+            font-size: 25px;
+
+            line-height: 1.4;
+
+            font-weight: 600;
+        }
+
+
+        .event-meta {
+            color: #666666;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+        }
+
+
+        .event-meta strong {
+            color: #444444;
+        }
+
+
+        /* =====================================================
+           PRESENTATION TYPE
+           ===================================================== */
+
+        .event-type {
+
+            display: inline-block;
+
+            margin-top: 12px;
+
+            padding: 5px 11px;
+
+            border-radius: 4px;
+
+            background: #eef5fc;
+
+            border: 1px solid #d5e3f1;
+
+            color: #17365d;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           EVENT CONTENT
+           ===================================================== */
+
+        .event-content {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 0.95fr)
+                minmax(0, 1.05fr);
+
+            gap: 35px;
+
+            align-items: start;
+        }
+
+
+        /* =====================================================
+           DESCRIPTION
+           ===================================================== */
+
+        .event-description {
+
+            padding: 24px 27px;
+
+            background: #f7f9fc;
+
+            border-left: 4px solid #d9e2f3;
+
+            border-radius: 5px;
+        }
+
+
+        .event-description h3 {
+
+            margin: 0 0 14px 0;
+
+            color: #17365d;
+
+            font-size: 19px;
+        }
+
+
+        .event-description p {
+
+            margin: 0 0 16px 0;
+
+            color: #555555;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        .event-description p:last-child {
+
+            margin-bottom: 0;
+        }
+
+
+        .description-placeholder {
+
+            color: #888888 !important;
+
+            font-style: italic;
+        }
+
+
+        /* =====================================================
+           PHOTO GALLERY
+           ===================================================== */
+
+        .event-gallery {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .event-photo {
+
+            overflow: hidden;
+
+            border-radius: 7px;
+
+            background: #f1f3f6;
+
+            border: 1px solid #e0e5eb;
+        }
+
+
+        .event-photo:first-child {
+
+            grid-column: span 2;
+
+        }
+
+
+        .event-photo img {
+
+            display: block;
+
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 160px;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.35s ease;
+        }
+
+
+        .event-photo:first-child img {
+
+            min-height: 245px;
+
+        }
+
+
+        .event-photo:hover img {
+
+            transform: scale(1.025);
+
+        }
+
+
+        /* =====================================================
+           PHOTO CAPTION
+           ===================================================== */
+
+        .photo-caption {
+
+            padding: 7px 10px;
+
+            color: #777777;
+
+            background: #ffffff;
+
+            font-size: 12px;
+
+            line-height: 1.4;
+        }
+
+
+        /* =====================================================
+           EVENT FOOTNOTE
+           ===================================================== */
+
+        .event-note {
+
+            margin-top: 18px;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .event-content {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .page-header-container {
+
+                padding-left: 20px;
+
+                padding-right: 20px;
+
+            }
+
+
+            .page-header h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .event-title {
+
+                font-size: 22px;
+
+            }
+
+
+            .event-gallery {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .event-photo:first-child {
+
+                grid-column: span 1;
+
+            }
+
+
+            .event-photo img,
+            .event-photo:first-child img {
+
+                min-height: 200px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+
+            <a href="index.html"
+               class="site-name">
+
+                Sayak Chakraborty
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="about.html">About</a>
+
+                <a href="research.html">Research</a>
+
+                <a href="publications.html">Publications</a>
+
+                <a href="talks.html">Talks &amp; Conferences</a>
+
+                <a href="blog.html">Research Blog</a>
+
+                <a href="cv.html">CV</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         PAGE HEADER
+         ===================================================== -->
+
+    <header class="page-header">
+
+        <div class="page-header-container">
+
+            <h1>Talks &amp; Conferences</h1>
+
+            <p>
+                Presentations, posters and scientific events
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-container">
+
+
+        <!-- =================================================
+             INTRODUCTION
+             ================================================= -->
+
+        <section class="talks-intro">
+
+            <p>
+
+                A selection of scientific conferences, workshops and
+                training programmes in which I have participated,
+                including oral presentations, poster presentations and
+                invited scientific contributions.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             NSSS 2026
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2026
+                </div>
+
+
+                <h2 class="event-title">
+
+                    23rd National Space Science Symposium (NSSS 2026)
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>23–27 February 2026</strong>
+                    · North Eastern Space Applications Centre
+                    (NESAC), Meghalaya
+
+                    <br>
+
+                    Organised by
+                    North Eastern Space Applications Centre (NESAC)
+                    and Indian Space Research Organisation (ISRO)
+
+                </div>
+
+
+                <span class="event-type">
+                    Poster Presentation
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        My Contribution
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        <!-- Write your description of the NSSS 2026
+                             poster here. -->
+
+                        Add a short description of the research
+                        presented in the poster, the scientific
+                        question addressed, and the main results.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/NSSS26-1.jpg"
+                             alt="NSSS 2026">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/NSSS26-2.jpg"
+                             alt="NSSS 2026">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/NSSS26-3.jpg"
+                             alt="NSSS 2026">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             YATI 3
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2025
+                </div>
+
+
+                <h2 class="event-title">
+
+                    3rd Young Astronomers of Today's India (YATI3)
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>7–9 October 2025</strong>
+                    · Indian Centre for Space Physics (ICSP),
+                    Kolkata
+
+                </div>
+
+
+                <span class="event-type">
+                    Oral Presentation
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        My Contribution
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        Add a short description of your oral
+                        presentation at YATI3, including the topic,
+                        motivation and key findings.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/YATI3-1.jpg"
+                             alt="YATI3">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/YATI3-2.jpg"
+                             alt="YATI3">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/YATI3-3.jpg"
+                             alt="YATI3">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             RCRS 2024
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2024
+                </div>
+
+
+                <h2 class="event-title">
+
+                    URSI-Regional Conference in Radio Science
+                    (RCRS 2024)
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>22–25 October 2024</strong>
+                    · Graphic Era Hill University,
+                    Bhimtal, Uttarakhand
+
+                    <br>
+
+                    Organised by the
+                    Indian Radio Science Society (InRaSS)
+
+                </div>
+
+
+                <span class="event-type">
+                    Oral Presentation
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        My Contribution
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        Add the description of your RCRS 2024
+                        presentation here. You may include the title
+                        of the presentation, methodology, principal
+                        results and significance.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/RCRS24-1.jpg"
+                             alt="RCRS 2024">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/RCRS24-2.jpg"
+                             alt="RCRS 2024">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/RCRS24-3.jpg"
+                             alt="RCRS 2024">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             NSSS 2024
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2024
+                </div>
+
+
+                <h2 class="event-title">
+
+                    22nd National Space Science Symposium (NSSS 2024)
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>26 February – 1 March 2024</strong>
+                    · Goa University, Goa
+
+                    <br>
+
+                    Organised by Goa University and
+                    Indian Space Research Organisation (ISRO)
+
+                </div>
+
+
+                <span class="event-type">
+                    Oral Presentation
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        My Contribution
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        Add the description of your oral presentation
+                        at NSSS 2024 here.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/NSSS24-1.jpg"
+                             alt="NSSS 2024">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/NSSS24-2.jpg"
+                             alt="NSSS 2024">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/NSSS24-3.jpg"
+                             alt="NSSS 2024">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             EXPLORING THE UNIVERSE
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2024
+                </div>
+
+
+                <h2 class="event-title">
+
+                    Exploring the Universe: From Near to Far
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>16–21 February 2024</strong>
+                    · Indian Centre for Space Physics (ICSP),
+                    Kolkata
+
+                    <br>
+
+                    Organised by the
+                    Indian Centre for Space Physics (ICSP)
+
+                </div>
+
+
+                <span class="event-type">
+                    Oral Presentation
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        My Contribution
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        Add a description of your presentation and
+                        the scientific topic discussed during the
+                        event.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/Universe24-1.jpg"
+                             alt="Exploring the Universe">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/Universe24-2.jpg"
+                             alt="Exploring the Universe">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/Universe24-3.jpg"
+                             alt="Exploring the Universe">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             SSA-STM 2023
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2023
+                </div>
+
+
+                <h2 class="event-title">
+
+                    Space Situational Awareness and Space Traffic
+                    Management (SSA-STM 2023)
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>12–14 October 2023</strong>
+                    · ISRO Headquarters, Bengaluru
+
+                    <br>
+
+                    Organised by the
+                    Indian Space Research Organisation (ISRO)
+
+                </div>
+
+
+                <span class="event-type">
+                    Workshop Participant
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        Participation
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        Add a short description of your experience
+                        at the SSA-STM workshop and the topics that
+                        were particularly relevant to your research.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/SSA23-1.jpg"
+                             alt="SSA-STM 2023">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/SSA23-2.jpg"
+                             alt="SSA-STM 2023">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/SSA23-3.jpg"
+                             alt="SSA-STM 2023">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             RCRS 2022
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2022
+                </div>
+
+
+                <h2 class="event-title">
+
+                    URSI-Regional Conference in Radio Science
+                    (RCRS 2022)
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>1–4 December 2022</strong>
+                    · Indian Institute of Technology Indore
+
+                    <br>
+
+                    Organised by the
+                    Indian Radio Science Society (InRaSS)
+
+                </div>
+
+
+                <span class="event-type">
+                    Oral Presentation
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        My Contribution
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        Add the title and description of your RCRS
+                        2022 oral presentation here.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/RCRS22-1.jpg"
+                             alt="RCRS 2022">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/RCRS22-2.jpg"
+                             alt="RCRS 2022">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/RCRS22-3.jpg"
+                             alt="RCRS 2022">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             ATSOA 2021
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2021
+                </div>
+
+
+                <h2 class="event-title">
+
+                    ARIES Training School in Observational Astronomy
+                    (ATSOA 2021)
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>17–24 May 2021</strong>
+                    · Virtual
+
+                    <br>
+
+                    Organised by the
+                    Aryabhatta Research Institute of
+                    Observational Sciences (ARIES),
+                    Nainital, Uttarakhand
+
+                </div>
+
+
+                <span class="event-type">
+                    Training School Participant
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        Participation
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        Add a short description of the training school,
+                        the subjects covered and how it contributed to
+                        your academic development.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/ATSOA21-1.jpg"
+                             alt="ATSOA 2021">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/ATSOA21-2.jpg"
+                             alt="ATSOA 2021">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/ATSOA21-3.jpg"
+                             alt="ATSOA 2021">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             IEMPHYS 2019
+             ===================================================== -->
+
+        <article class="event">
+
+            <div class="event-header">
+
+                <div class="event-year">
+                    2019
+                </div>
+
+
+                <h2 class="event-title">
+
+                    International Conference on Condensed Matter Physics
+                    (IEMPHYS-19)
+
+                </h2>
+
+
+                <div class="event-meta">
+
+                    <strong>14–16 November 2019</strong>
+                    · Institute of Engineering and Management
+                    (IEM), Kolkata
+
+                </div>
+
+
+                <span class="event-type">
+                    Poster Presentation
+                </span>
+
+            </div>
+
+
+            <div class="event-content">
+
+
+                <div class="event-description">
+
+                    <h3>
+                        My Contribution
+                    </h3>
+
+
+                    <p class="description-placeholder">
+
+                        Add the title and description of your poster
+                        presentation here.
+
+                    </p>
+
+                </div>
+
+
+                <div class="event-gallery">
+
+                    <div class="event-photo">
+
+                        <img src="images/IEMPHYS19-1.jpg"
+                             alt="IEMPHYS-19">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/IEMPHYS19-2.jpg"
+                             alt="IEMPHYS-19">
+
+                    </div>
+
+
+                    <div class="event-photo">
+
+                        <img src="images/IEMPHYS19-3.jpg"
+                             alt="IEMPHYS-19">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 Sayak Chakraborty
+            </p>
+
+            <p>
+                Space Physics · Ionospheric Science ·
+                Solar–Terrestrial Physics
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
