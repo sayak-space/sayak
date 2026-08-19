@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        VLF Radio Propagation | Sayak Chakraborty
+    </title>
+
+    <meta name="description"
+          content="An introduction to Very Low Frequency radio propagation, the Earth-ionosphere waveguide, ionospheric reflection, absorption and transmitter-receiver propagation paths.">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        .article-header {
+            background: #f5f7fa;
+            border-bottom: 1px solid #e1e6ee;
+        }
+
+        .article-header-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        .article-category {
+            margin-bottom: 10px;
+            color: #1479e8;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .article-header h1 {
+            margin: 0 0 15px 0;
+            color: #17365d;
+            font-size: 42px;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        .article-header p {
+            max-width: 800px;
+            margin: 0;
+            color: #666;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: auto;
+            padding: 55px 30px 80px;
+        }
+
+        .article-body {
+            color: #3f3f3f;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .article-body p {
+            margin: 0 0 22px;
+        }
+
+        .article-body h2 {
+            margin: 50px 0 20px;
+            padding-bottom: 9px;
+            border-bottom: 2px solid #d9e2f3;
+            color: #17365d;
+            font-size: 29px;
+            line-height: 1.35;
+        }
+
+        .article-body h3 {
+            margin: 34px 0 13px;
+            color: #17365d;
+            font-size: 21px;
+        }
+
+        .article-body strong {
+            color: #303030;
+        }
+
+        .article-highlight {
+            margin: 35px 0 42px;
+            padding: 30px 32px;
+            background: #f7f9fc;
+            border-left: 5px solid #1479e8;
+            border-radius: 5px;
+        }
+
+        .article-highlight p {
+            margin: 0;
+            color: #17365d;
+            font-size: 20px;
+            line-height: 1.65;
+            font-weight: 500;
+        }
+
+        .article-note {
+            margin: 35px 0;
+            padding: 22px 25px;
+            background: #f7f9fc;
+            border-left: 4px solid #1479e8;
+            border-radius: 5px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .equation {
+            margin: 28px 0;
+            padding: 20px;
+            overflow-x: auto;
+            text-align: center;
+            background: #fafbfd;
+            border: 1px solid #e1e6ee;
+            border-radius: 5px;
+            color: #17365d;
+            font-size: 19px;
+        }
+
+        .article-figure {
+            margin: 40px auto 45px;
+            text-align: center;
+        }
+
+        .article-figure img {
+            display: block;
+            width: 100%;
+            max-width: 780px;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid #dfe5ec;
+            border-radius: 6px;
+            background: #fff;
+        }
+
+        .article-figure figcaption {
+            max-width: 750px;
+            margin: 12px auto 0;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin: 35px 0 45px;
+        }
+
+        .concept-card {
+            padding: 23px;
+            background: #fafbfd;
+            border: 1px solid #e1e6ee;
+            border-radius: 6px;
+        }
+
+        .concept-card h3 {
+            margin: 0 0 8px;
+            color: #17365d;
+            font-size: 19px;
+        }
+
+        .concept-card p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .reference {
+            margin-top: 20px;
+            padding: 22px 25px;
+            background: #fafbfd;
+            border: 1px solid #e1e6ee;
+            border-radius: 5px;
+        }
+
+        .reference p {
+            margin: 0 0 12px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .reference p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-back {
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 1px solid #e1e6ee;
+        }
+
+        .article-back a {
+            color: #1479e8;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .article-back a:hover {
+            text-decoration: underline;
+        }
+
+        .citation {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 700px) {
+
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .article-header-container {
+                padding: 45px 20px;
+            }
+
+            .article-header h1 {
+                font-size: 34px;
+            }
+
+            .article-container {
+                padding: 40px 20px 60px;
+            }
+
+            .article-body {
+                font-size: 15.5px;
+            }
+
+            .article-body h2 {
+                font-size: 26px;
+            }
+
+            .article-highlight {
+                padding: 24px;
+            }
+
+            .article-highlight p {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="site-name">
+                Sayak Chakraborty
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../about.html">About</a>
+
+                <a href="../research.html">Research</a>
+
+                <a href="../publications.html">
+                    Publications
+                </a>
+
+                <a href="../talks.html">
+                    Talks &amp; Conferences
+                </a>
+
+                <a href="../blog.html">
+                    Blog
+                </a>
+
+                <a href="../cv.html">
+                    CV
+                </a>
+
+                <a href="../contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ARTICLE HEADER -->
+
+    <header class="article-header">
+
+        <div class="article-header-container">
+
+            <div class="article-category">
+                Research Blog · Radio Science
+            </div>
+
+            <h1>
+                VLF Radio Propagation and the
+                Earth–Ionosphere Waveguide
+            </h1>
+
+            <p>
+                How Very Low Frequency radio waves interact with the
+                ionosphere and propagate over thousands of kilometres
+                between the Earth and the lower ionosphere.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ARTICLE CONTENT -->
+
+    <main class="article-container">
+
+        <article class="article-body">
+
+
+            <p>
+
+                The ionosphere is a stratified plasma whose electron
+                density changes with altitude, time of day, season and
+                solar activity. Because of this, it can strongly
+                influence the propagation of electromagnetic waves.
+                Radio waves may be reflected, refracted, bent or
+                absorbed depending on their frequency and the
+                characteristics of the ionospheric medium.
+
+            </p>
+
+
+            <p>
+
+                Among the different radio-frequency bands used for
+                ionospheric studies, <strong>Very Low Frequency
+                (VLF)</strong> radio waves are particularly interesting.
+                Their ability to propagate over very large distances
+                makes them valuable for communication as well as for
+                investigating the lower ionosphere.
+
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+
+                    A VLF signal is not merely a radio transmission.
+                    As it travels through the Earth–ionosphere
+                    waveguide, it continuously interacts with the
+                    ionosphere and therefore carries information about
+                    the medium through which it has propagated.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ELECTROMAGNETIC WAVES -->
+
+            <h2>
+                Electromagnetic Waves and the Ionosphere
+            </h2>
+
+
+            <p>
+
+                Classical Maxwellian theory describes electromagnetic
+                radiation as a transverse wave consisting of mutually
+                perpendicular electric and magnetic field vectors.
+                For large-scale radio propagation through the
+                atmosphere and ionosphere, the behaviour of
+                electromagnetic waves can be considered using both a
+                <strong>wave model</strong> and a
+                <strong>ray model</strong>.
+
+            </p>
+
+
+            <p>
+
+                The wave description is useful for understanding
+                interference and modal behaviour, while the ray
+                description provides an intuitive picture of
+                reflection, refraction and bending. For the present
+                discussion, the ray model provides the basic physical
+                picture of ionospheric radio propagation.
+
+            </p>
+
+
+            <p class="citation">
+
+                The theoretical treatment presented here is adapted
+                from the ionospheric radio-propagation chapter of
+                Chakraborty's PhD thesis (2026).
+
+            </p>
+
+
+
+            <!-- UNMAGNETISED -->
+
+            <h2>
+                A Simple Beginning: Ionosphere Without a Magnetic Field
+            </h2>
+
+
+            <p>
+
+                The actual ionosphere exists within the Earth's magnetic
+                field. However, a useful first step is to consider the
+                simplified case in which the geomagnetic field is
+                neglected. This treatment is commonly associated with
+                the <strong>Eccles–Larmor theory</strong>.
+
+            </p>
+
+
+            <p>
+
+                Consider a horizontally stratified ionosphere in which
+                the electron density increases with altitude. Suppose a
+                plane-polarised electromagnetic wave produces an
+                oscillating electric field
+
+            </p>
+
+
+            <div class="equation">
+
+                E = E<sub>0</sub> sin(&omega;t)
+
+            </div>
+
+
+            <p>
+
+                where E<sub>0</sub> is the amplitude of the electric
+                field and &omega; is its angular frequency.
+
+            </p>
+
+
+            <p>
+
+                The electric field causes the free electrons to
+                oscillate. Neglecting collisions for this simplified
+                treatment, the equation of motion of an electron can
+                be written as
+
+            </p>
+
+
+            <div class="equation">
+
+                m<sub>e</sub>
+                d<strong>v</strong><sub>e</sub>/dt
+                =
+                e<strong>E</strong>
+
+            </div>
+
+
+            <p>
+
+                The resulting electron motion contributes a conduction
+                current. At the same time, the changing electric field
+                produces a displacement current. Their combined effect
+                can be expressed through an effective permittivity of
+                the ionised medium.
+
+            </p>
+
+
+
+            <!-- PLASMA FREQUENCY -->
+
+            <h2>
+                Plasma Frequency
+            </h2>
+
+
+            <p>
+
+                The presence of free electrons changes the effective
+                dielectric properties of the ionosphere. In the
+                simplified unmagnetised case, the relative permittivity
+                can be written as
+
+            </p>
+
+
+            <div class="equation">
+
+                &epsilon;<sub>r</sub>
+                =
+                1 -
+                &omega;<sub>p</sub><sup>2</sup>
+                /
+                &omega;<sup>2</sup>
+
+            </div>
+
+
+            <p>
+
+                Here &omega;<sub>p</sub> is the
+                <strong>plasma frequency</strong>, the natural
+                oscillation frequency associated with the collective
+                motion of electrons in the plasma.
+
+            </p>
+
+
+            <p>
+
+                In its standard form, the plasma frequency is
+
+            </p>
+
+
+            <div class="equation">
+
+                &omega;<sub>p</sub>
+                =
+                &radic;
+                (
+                N<sub>e</sub>e<sup>2</sup>
+                /
+                &epsilon;<sub>0</sub>m<sub>e</sub>
+                )
+
+            </div>
+
+
+            <p>
+
+                where N<sub>e</sub> is the electron density,
+                e is the electron charge, m<sub>e</sub> is the
+                electron mass and &epsilon;<sub>0</sub> is the
+                permittivity of free space.
+
+            </p>
+
+
+            <div class="article-note">
+
+                <strong>
+                    The important idea:
+                </strong>
+
+                <br><br>
+
+                Plasma frequency depends on electron density.
+                Since electron density varies with altitude, the
+                plasma frequency also varies with altitude. This is
+                one of the fundamental reasons why radio waves of
+                different frequencies interact with different regions
+                of the ionosphere.
+
+            </div>
+
+
+
+            <!-- REFRACTIVE INDEX -->
+
+            <h2>
+                Refractive Index and Bending
+            </h2>
+
+
+            <p>
+
+                The phase velocity of an electromagnetic wave in the
+                simplified ionospheric plasma is
+
+            </p>
+
+
+            <div class="equation">
+
+                v<sub>p</sub>
+                =
+                c
+                /
+                &radic;
+                (
+                1 -
+                &omega;<sub>p</sub><sup>2</sup>
+                /
+                &omega;<sup>2</sup>
+                )
+
+            </div>
+
+
+            <p>
+
+                Consequently, the refractive index becomes
+
+            </p>
+
+
+            <div class="equation">
+
+                &mu;
+                =
+                &radic;
+                (
+                1 -
+                &omega;<sub>p</sub><sup>2</sup>
+                /
+                &omega;<sup>2</sup>
+                )
+
+            </div>
+
+
+            <p>
+
+                As electron density changes with altitude, so does the
+                refractive index. According to Snell's law, a gradual
+                change in refractive index causes the direction of
+                propagation of a radio ray to change.
+
+            </p>
+
+
+            <p>
+
+                Thus, rather than being reflected from a perfectly sharp
+                boundary, a radio wave propagating through a
+                continuously stratified ionosphere can gradually bend
+                as it moves through regions of changing electron
+                density.
+
+            </p>
+
+
+            <p>
+
+                Under suitable conditions the ray eventually turns
+                around and returns towards the Earth's surface. Since
+                the plasma frequency depends on electron density and
+                the wave frequency appears explicitly in the refractive
+                index, different radio frequencies can interact with
+                different altitude regions.
+
+            </p>
+
+
+
+            <!-- MAGNETIC FIELD -->
+
+            <h2>
+                The Real Ionosphere: The Earth's Magnetic Field
+            </h2>
+
+
+            <p>
+
+                The simplified treatment above neglects one of the most
+                important physical properties of the actual ionosphere:
+                the Earth's magnetic field.
+
+            </p>
+
+
+            <p>
+
+                In the presence of a magnetic field, the equation of
+                motion of an electron becomes
+
+            </p>
+
+
+            <div class="equation">
+
+                m<sub>e</sub>
+                d<strong>v</strong><sub>e</sub>/dt
+                =
+                e
+                (
+                <strong>E</strong>
+                +
+                <strong>v</strong><sub>e</sub>
+                &times;
+                <strong>B</strong><sub>0</sub>
+                )
+
+            </div>
+
+
+            <p>
+
+                The magnetic field causes electrons to gyrate around
+                magnetic field lines. Consequently, the ionosphere
+                becomes an <strong>anisotropic medium</strong>, meaning
+                that the response of the medium depends on the
+                direction of wave propagation relative to the
+                geomagnetic field.
+
+            </p>
+
+
+            <p>
+
+                The combined effects of electron density, magnetic field
+                and wave frequency were described by Edward Victor
+                Appleton and Douglas R. Hartree in what is now known as
+                the <strong>Appleton–Hartree theory</strong>.
+
+            </p>
+
+
+
+            <!-- APPLETON HARTREE -->
+
+            <h2>
+                Appleton–Hartree Theory
+            </h2>
+
+
+            <p>
+
+                In the magnetised ionosphere, the dielectric response
+                cannot be represented by a single scalar quantity.
+                Instead, it is described using a dielectric tensor.
+
+            </p>
+
+
+            <p>
+
+                The Appleton–Hartree formulation introduces several
+                dimensionless parameters that describe the relative
+                importance of plasma oscillation, magnetic gyration
+                and collisions.
+
+            </p>
+
+
+            <div class="concept-grid">
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Plasma frequency
+                    </h3>
+
+                    <p>
+
+                        Describes the natural collective oscillation
+                        frequency of the electrons and depends on
+                        electron density.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Gyrofrequency
+                    </h3>
+
+                    <p>
+
+                        Represents the characteristic frequency of
+                        electron gyration around the Earth's magnetic
+                        field.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Collision frequency
+                    </h3>
+
+                    <p>
+
+                        Represents the frequency of collisions between
+                        electrons and atmospheric particles and becomes
+                        especially important in the lower ionosphere.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Propagation angle
+                    </h3>
+
+                    <p>
+
+                        The angle between the wave propagation direction
+                        and the geomagnetic field determines the
+                        magneto-ionic response.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <p>
+
+                Two useful limiting cases are the
+                <strong>quasi-longitudinal (QL)</strong> and
+                <strong>quasi-transverse (QT)</strong> approximations.
+
+                The QL case corresponds approximately to propagation
+                along the magnetic field, while the QT case corresponds
+                approximately to propagation perpendicular to it.
+
+            </p>
+
+
+
+            <!-- COLLISIONS -->
+
+            <h2>
+                Collisions and Absorption
+            </h2>
+
+
+            <p>
+
+                At lower ionospheric altitudes, the neutral atmospheric
+                density is much higher than in the upper ionosphere.
+                Free electrons therefore undergo frequent collisions
+                with neutral molecules.
+
+            </p>
+
+
+            <p>
+
+                These collisions are particularly important for VLF
+                propagation because they cause absorption of the radio
+                wave. Part of the energy carried by the electromagnetic
+                wave is transferred to the medium through collisional
+                processes, resulting in signal attenuation.
+
+            </p>
+
+
+            <p>
+
+                The collision frequency changes strongly with altitude.
+                Consequently, radio waves interacting with different
+                ionospheric regions experience different amounts of
+                absorption.
+
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+
+                    This is one of the reasons why the D-region is so
+                    important for VLF research: it is not simply a
+                    reflecting layer. Its electron density and
+                    collision environment determine how strongly a
+                    VLF signal is absorbed.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- EARTH IONOSPHERE WAVEGUIDE -->
+
+            <h2>
+                The Earth–Ionosphere Waveguide
+            </h2>
+
+
+            <p>
+
+                The Earth's surface and the lower ionosphere together
+                form a natural waveguide known as the
+                <strong>Earth–Ionosphere Waveguide (EIWG)</strong>.
+
+            </p>
+
+
+            <p>
+
+                The Earth acts approximately as the lower boundary of
+                this waveguide, while the ionosphere forms the upper
+                boundary.
+
+            </p>
+
+
+            <figure class="article-figure">
+
+                <img src="../images/EIWG_Schematic.png"
+                     alt="Schematic diagram of VLF radio propagation through the Earth-ionosphere waveguide">
+
+                <figcaption>
+
+                    Schematic representation of VLF radio propagation
+                    through the Earth–ionosphere waveguide.
+
+                </figcaption>
+
+            </figure>
+
+
+            <p>
+
+                When a VLF transmitter radiates a signal, part of the
+                energy travels close to the Earth's surface as a
+                <strong>ground wave</strong>. Another component travels
+                upward as a <strong>sky wave</strong> and interacts
+                with the ionosphere.
+
+            </p>
+
+
+            <p>
+
+                The sky wave can return towards the Earth's surface and
+                may subsequently undergo further reflections between
+                the Earth and ionosphere. Through this mechanism, VLF
+                signals can propagate beyond the horizon and travel
+                distances of thousands of kilometres with relatively
+                low attenuation.
+
+            </p>
+
+
+
+            <!-- SKIP ZONE -->
+
+            <h2>
+                The Skip Zone
+            </h2>
+
+
+            <p>
+
+                The propagation of a VLF signal does not necessarily
+                produce uniform coverage everywhere along the ground.
+                There can be regions where neither the direct ground
+                wave nor the first-order reflected sky wave provides
+                significant signal strength.
+
+            </p>
+
+
+            <p>
+
+                Such a region is known as a
+                <strong>skip zone</strong>. The position and extent of
+                this region depend on the propagation geometry and the
+                prevailing ionospheric conditions.
+
+            </p>
+
+
+
+            <!-- D REGION -->
+
+            <h2>
+                Why the D-Region Matters for VLF
+            </h2>
+
+
+            <p>
+
+                Although the D-region contains far fewer free electrons
+                than the E- and F-regions, it plays a disproportionately
+                important role in VLF propagation.
+
+            </p>
+
+
+            <p>
+
+                The lower D-region contains a relatively dense neutral
+                atmosphere. Consequently, electron-neutral collision
+                frequencies are high and collisional absorption of VLF
+                waves becomes significant.
+
+            </p>
+
+
+            <p>
+
+                During daytime, solar radiation increases D-region
+                ionization. The resulting changes in electron density
+                and collision frequency modify VLF absorption and
+                propagation conditions.
+
+            </p>
+
+
+            <p>
+
+                At night, the reduction in solar ionization causes the
+                D-region electron density to decrease, producing a
+                substantially different propagation environment.
+
+            </p>
+
+
+
+            <!-- DAY NIGHT -->
+
+            <h2>
+                Day–Night Variations in VLF Propagation
+            </h2>
+
+
+            <p>
+
+                One of the most obvious signatures in VLF observations
+                is the difference between daytime and nighttime
+                propagation.
+
+            </p>
+
+
+            <p>
+
+                During daylight, solar radiation produces additional
+                ionization in the D-region. The enhanced electron
+                density changes the reflection and absorption
+                characteristics of the Earth–ionosphere waveguide.
+
+            </p>
+
+
+            <p>
+
+                After sunset, ion production decreases while
+                recombination and attachment processes become more
+                important. The lower ionosphere consequently evolves
+                into a different propagation environment.
+
+            </p>
+
+
+            <p>
+
+                This strong diurnal dependence makes VLF signals a
+                useful tool for studying the lower ionosphere.
+
+            </p>
+
+
+
+            <!-- SOLAR FLARES -->
+
+            <h2>
+                VLF as a Detector of Solar Flares
+            </h2>
+
+
+            <p>
+
+                The sensitivity of the D-region to solar radiation
+                provides a powerful opportunity for remote sensing.
+
+            </p>
+
+
+            <p>
+
+                During a solar flare, the Sun can suddenly emit enhanced
+                X-ray and EUV radiation. These photons reach the Earth
+                and rapidly increase ionization in the lower ionosphere.
+
+            </p>
+
+
+            <p>
+
+                The resulting change in D-region electron density
+                modifies the propagation conditions of VLF waves. A
+                receiver on Earth can therefore detect a disturbance
+                caused by an event occurring approximately 150 million
+                kilometres away.
+
+            </p>
+
+
+            <div class="article-note">
+
+                <strong>
+                    This is the basic idea behind VLF remote sensing:
+                </strong>
+
+                <br><br>
+
+                We observe how the radio signal changes, and from that
+                change we infer how the lower ionosphere has changed.
+
+            </div>
+
+
+
+            <!-- GCP -->
+
+            <h2>
+                The Transmitter–Receiver Great-Circle Path
+            </h2>
+
+
+            <p>
+
+                VLF signals between a transmitter and receiver
+                propagate primarily along the
+                <strong>great-circle path (GCP)</strong>, representing
+                the shortest path between the two locations on the
+                Earth's surface.
+
+            </p>
+
+
+            <p>
+
+                If the transmitter and receiver have geographical
+                coordinates
+                (lat<sub>Tx</sub>, lon<sub>Tx</sub>) and
+                (lat<sub>Rx</sub>, lon<sub>Rx</sub>), the angular
+                separation can be written as
+
+            </p>
+
+
+            <div class="equation">
+
+                cos(&Theta;) =
+                sin(lat<sub>Tx</sub>) sin(lat<sub>Rx</sub>)
+                +
+                cos(lat<sub>Tx</sub>) cos(lat<sub>Rx</sub>)
+                cos(lon<sub>Rx</sub> &minus; lon<sub>Tx</sub>)
+
+            </div>
+
+
+            <p>
+
+                The corresponding propagation distance along the
+                great-circle path is
+
+            </p>
+
+
+            <div class="equation">
+
+                d = R<sub>E</sub> &Theta;
+
+            </div>
+
+
+            <p>
+
+                where R<sub>E</sub> is the Earth's radius.
+
+            </p>
+
+
+
+            <!-- SEGMENTATION -->
+
+            <h2>
+                Why the Propagation Path Must Be Considered
+            </h2>
+
+
+            <p>
+
+                The ionosphere is not uniform along a long
+                transmitter–receiver path. Solar zenith angle,
+                electron density and other ionospheric parameters can
+                vary significantly from one location to another.
+
+            </p>
+
+
+            <p>
+
+                For numerical modelling, the great-circle path can
+                therefore be divided into a number of smaller
+                segments. The ionospheric conditions of each segment
+                can then be incorporated into the propagation
+                calculation.
+
+            </p>
+
+
+            <p>
+
+                Such segmentation becomes especially important when
+                the propagation path crosses the day–night boundary
+                or when a solar disturbance affects only a portion of
+                the path.
+
+            </p>
+
+
+
+            <!-- SUMMARY -->
+
+            <h2>
+                In Summary
+            </h2>
+
+
+            <p>
+
+                VLF propagation is the result of a complex interaction
+                between electromagnetic waves and the ionised,
+                magnetised and collisional environment of the lower
+                ionosphere.
+
+            </p>
+
+
+            <p>
+
+                The Earth and ionosphere form a natural waveguide that
+                allows VLF signals to travel thousands of kilometres.
+                The properties of this waveguide depend on electron
+                density, collision frequency, solar illumination,
+                geomagnetic conditions and propagation geometry.
+
+            </p>
+
+
+            <p>
+
+                Because the lower ionosphere responds to solar and
+                geophysical disturbances, VLF signals provide a
+                powerful method of remotely monitoring the D-region.
+
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+
+                    In VLF remote sensing, the radio signal itself
+                    becomes the probe with which we investigate a
+                    region of the atmosphere that is otherwise very
+                    difficult to observe directly.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- REFERENCES -->
+
+            <h2>
+                References
+            </h2>
+
+
+            <div class="reference">
+
+                <p>
+                    Appleton, E. V. (1932).
+                    Magneto-ionic theory of radio-wave propagation.
+                </p>
+
+                <p>
+                    Eccles, W. H. (1912).
+                    Early theoretical treatment of ionospheric
+                    radio-wave propagation.
+                </p>
+
+                <p>
+                    Larmor, J. (1924).
+                    Electromagnetic theory of ionospheric propagation.
+                </p>
+
+                <p>
+                    Barr, R. (1970).
+                    Studies of VLF radio-wave absorption in the
+                    lower ionosphere.
+                </p>
+
+                <p>
+                    Barr, R. (2000).
+                    VLF radio propagation and ionospheric absorption.
+                </p>
+
+                <p>
+                    Soloviev, O. V. (1997).
+                    Long-distance propagation of VLF radio waves.
+                </p>
+
+                <p>
+                    Thomson, N. R. (2007).
+                    VLF propagation and the lower ionosphere.
+                </p>
+
+                <p>
+                    <strong>Chakraborty, S.</strong> (2026).
+                    PhD Thesis, University of Calcutta.
+                    Material adapted from the chapter on ionospheric
+                    radio propagation.
+                </p>
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <div class="article-back">
+
+                <a href="../research-blog.html">
+                    &larr; Back to Research Blog
+                </a>
+
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                &copy; 2026 Sayak Chakraborty
+            </p>
+
+            <p>
+                Space Physics &middot;
+                Ionospheric Science &middot;
+                Solar&ndash;Terrestrial Physics
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
