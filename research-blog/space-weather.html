@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Space Weather | Sayak Chakraborty
+    </title>
+
+    <meta name="description"
+          content="An introduction to space weather, solar activity, solar flares, coronal mass ejections, the solar wind, magnetosphere and their effects on Earth's space environment.">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        .article-header {
+            background: #f5f7fa;
+            border-bottom: 1px solid #e1e6ee;
+        }
+
+        .article-header-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        .article-category {
+            margin-bottom: 10px;
+            color: #1479e8;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .article-header h1 {
+            margin: 0 0 15px 0;
+            color: #17365d;
+            font-size: 42px;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        .article-header p {
+            max-width: 800px;
+            margin: 0;
+            color: #666;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: auto;
+            padding: 55px 30px 80px;
+        }
+
+        .article-body {
+            color: #3f3f3f;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .article-body p {
+            margin: 0 0 22px;
+        }
+
+        .article-body h2 {
+            margin: 50px 0 20px;
+            padding-bottom: 9px;
+            border-bottom: 2px solid #d9e2f3;
+            color: #17365d;
+            font-size: 29px;
+            line-height: 1.35;
+        }
+
+        .article-body h3 {
+            margin: 34px 0 13px;
+            color: #17365d;
+            font-size: 21px;
+        }
+
+        .article-body strong {
+            color: #303030;
+        }
+
+        .article-highlight {
+            margin: 35px 0 42px;
+            padding: 30px 32px;
+            background: #f7f9fc;
+            border-left: 5px solid #1479e8;
+            border-radius: 5px;
+        }
+
+        .article-highlight p {
+            margin: 0;
+            color: #17365d;
+            font-size: 20px;
+            line-height: 1.65;
+            font-weight: 500;
+        }
+
+        .article-note {
+            margin: 35px 0;
+            padding: 22px 25px;
+            background: #f7f9fc;
+            border-left: 4px solid #1479e8;
+            border-radius: 5px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin: 35px 0 45px;
+        }
+
+        .concept-card {
+            padding: 24px;
+            background: #fafbfd;
+            border: 1px solid #e1e6ee;
+            border-radius: 6px;
+        }
+
+        .concept-card h3 {
+            margin: 0 0 9px;
+            color: #17365d;
+            font-size: 19px;
+        }
+
+        .concept-card p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .article-figure {
+            margin: 40px auto 45px;
+            text-align: center;
+        }
+
+        .article-figure img {
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid #dfe5ec;
+            border-radius: 6px;
+            background: #fff;
+        }
+
+        .article-figure figcaption {
+            max-width: 750px;
+            margin: 12px auto 0;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .reference {
+            margin-top: 20px;
+            padding: 22px 25px;
+            background: #fafbfd;
+            border: 1px solid #e1e6ee;
+            border-radius: 5px;
+        }
+
+        .reference p {
+            margin: 0 0 12px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .reference p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-back {
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 1px solid #e1e6ee;
+        }
+
+        .article-back a {
+            color: #1479e8;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .article-back a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 700px) {
+
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .article-header-container {
+                padding: 45px 20px;
+            }
+
+            .article-header h1 {
+                font-size: 34px;
+            }
+
+            .article-container {
+                padding: 40px 20px 60px;
+            }
+
+            .article-body {
+                font-size: 15.5px;
+            }
+
+            .article-body h2 {
+                font-size: 26px;
+            }
+
+            .article-highlight {
+                padding: 24px;
+            }
+
+            .article-highlight p {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="site-name">
+                Sayak Chakraborty
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../about.html">
+                    About
+                </a>
+
+                <a href="../research.html">
+                    Research
+                </a>
+
+                <a href="../publications.html">
+                    Publications
+                </a>
+
+                <a href="../talks.html">
+                    Talks &amp; Conferences
+                </a>
+
+                <a href="../blog.html">
+                    Blog
+                </a>
+
+                <a href="../cv.html">
+                    CV
+                </a>
+
+                <a href="../contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         ARTICLE HEADER
+         ===================================================== -->
+
+    <header class="article-header">
+
+        <div class="article-header-container">
+
+            <div class="article-category">
+                Research Blog · Solar–Terrestrial Physics
+            </div>
+
+            <h1>
+                Space Weather
+            </h1>
+
+            <p>
+                Understanding how solar activity influences the
+                near-Earth space environment, the ionosphere and
+                the technological systems we depend upon.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         ARTICLE CONTENT
+         ===================================================== -->
+
+    <main class="article-container">
+
+        <article class="article-body">
+
+
+            <!-- INTRODUCTION -->
+
+            <p>
+
+                We usually think of weather as something that happens
+                in the Earth's atmosphere — rain, storms, temperature
+                changes and winds. But the region of space surrounding
+                Earth is also continuously changing.
+
+            </p>
+
+
+            <p>
+
+                The Sun is the primary source of energy driving these
+                changes. It continuously emits electromagnetic
+                radiation and a stream of charged particles, while
+                occasionally releasing enormous amounts of energy
+                through explosive events such as
+                <strong>solar flares</strong> and
+                <strong>coronal mass ejections (CMEs)</strong>.
+
+            </p>
+
+
+            <p>
+
+                The changing conditions in the Sun, the solar wind,
+                the magnetosphere, ionosphere and upper atmosphere
+                constitute what we broadly call
+                <strong>space weather</strong>.
+
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+
+                    Space weather is essentially the changing
+                    environmental condition of near-Earth space
+                    driven by solar activity.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- WHAT IS SPACE WEATHER -->
+
+            <h2>
+                What Is Space Weather?
+            </h2>
+
+
+            <p>
+
+                Space weather refers to variations in the
+                near-Earth space environment caused primarily by
+                changing solar activity.
+
+            </p>
+
+
+            <p>
+
+                These variations can occur on very different
+                timescales. Some changes happen gradually over the
+                approximately eleven-year solar cycle, while others
+                can occur within minutes or hours following a solar
+                flare or eruptive event.
+
+            </p>
+
+
+            <p>
+
+                Space weather therefore involves a chain of
+                interconnected physical processes extending from
+                the solar atmosphere to the Earth's magnetosphere
+                and ionosphere.
+
+            </p>
+
+
+
+            <!-- SOLAR SOURCE -->
+
+            <h2>
+                It All Begins at the Sun
+            </h2>
+
+
+            <p>
+
+                The Sun is a magnetically active star. Its surface
+                and atmosphere are threaded by complex magnetic
+                fields that continuously evolve.
+
+            </p>
+
+
+            <p>
+
+                The long-term evolution of this magnetic activity
+                produces the approximately eleven-year
+                <strong>solar cycle</strong>, while the restructuring
+                of magnetic fields in active regions can produce
+                much shorter-lived energetic events.
+
+            </p>
+
+
+            <div class="concept-grid">
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Solar Flares
+                    </h3>
+
+                    <p>
+
+                        Sudden releases of enormous amounts of
+                        electromagnetic energy, particularly
+                        important because of their intense X-ray
+                        and EUV radiation.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Coronal Mass Ejections
+                    </h3>
+
+                    <p>
+
+                        Large expulsions of magnetised plasma from
+                        the solar corona that can travel through
+                        interplanetary space.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Solar Wind
+                    </h3>
+
+                    <p>
+
+                        The continuous outflow of charged particles
+                        from the solar corona that fills the
+                        heliosphere.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Energetic Particles
+                    </h3>
+
+                    <p>
+
+                        High-energy particles associated with solar
+                        eruptions and shocks that can reach the
+                        near-Earth environment.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SOLAR WIND -->
+
+            <h2>
+                The Solar Wind: The Sun's Continuous Outflow
+            </h2>
+
+
+            <p>
+
+                The Sun does not simply radiate electromagnetic
+                energy. It also continuously releases charged
+                particles into space. This outflow is known as the
+                <strong>solar wind</strong>.
+
+            </p>
+
+
+            <p>
+
+                The solar wind consists primarily of electrons and
+                protons, together with other charged particles. It
+                travels outward through the heliosphere and forms
+                the plasma environment through which the planets
+                move.
+
+            </p>
+
+
+            <p>
+
+                The solar wind is not perfectly steady. Its density,
+                velocity and embedded magnetic field can change
+                considerably.
+
+            </p>
+
+
+            <p>
+
+                When disturbances originating at the Sun propagate
+                outward through the solar wind, they can eventually
+                interact with the Earth's magnetic environment.
+
+            </p>
+
+
+
+            <!-- MAGNETOSPHERE -->
+
+            <h2>
+                Earth's Magnetic Shield: The Magnetosphere
+            </h2>
+
+
+            <p>
+
+                Earth is surrounded by a magnetic field. When the
+                solar wind encounters this field, it is deflected
+                around much of the planet, creating a vast region
+                known as the <strong>magnetosphere</strong>.
+
+            </p>
+
+
+            <p>
+
+                The magnetosphere acts as an important protective
+                barrier between the Earth and the solar wind.
+                However, it is not an impenetrable shield.
+
+            </p>
+
+
+            <p>
+
+                Energy and charged particles from the solar wind can
+                interact with the magnetosphere, particularly when
+                the magnetic field carried by the solar wind has an
+                orientation favourable for magnetic reconnection.
+
+            </p>
+
+
+            <div class="article-note">
+
+                <strong>
+                    The magnetosphere is dynamic.
+                </strong>
+
+                <br><br>
+
+                During strong solar disturbances, it can become
+                compressed, distorted and highly disturbed. These
+                changes are among the major manifestations of
+                geomagnetic space weather.
+
+            </div>
+
+
+
+            <!-- GEOMAGNETIC STORMS -->
+
+            <h2>
+                Geomagnetic Storms
+            </h2>
+
+
+            <p>
+
+                One of the most important space-weather phenomena
+                affecting Earth is the
+                <strong>geomagnetic storm</strong>.
+
+            </p>
+
+
+            <p>
+
+                A strong solar-wind disturbance, particularly one
+                associated with a CME, can transfer substantial
+                energy into the magnetosphere. This causes large
+                changes in Earth's magnetic environment.
+
+            </p>
+
+
+            <p>
+
+                During a major geomagnetic storm, the upper
+                atmosphere can become heated and expanded, electric
+                currents can intensify, and the ionosphere can undergo
+                substantial changes.
+
+            </p>
+
+
+            <p>
+
+                These effects can extend from the magnetosphere down
+                into the ionosphere and upper atmosphere, producing
+                a chain of coupled solar-terrestrial phenomena.
+
+            </p>
+
+
+
+            <!-- IONOSPHERE -->
+
+            <h2>
+                The Ionosphere: Where Space Weather Meets the Atmosphere
+            </h2>
+
+
+            <p>
+
+                The <strong>ionosphere</strong> is the ionised part
+                of Earth's upper atmosphere. It extends roughly from
+                tens of kilometres above the surface to several
+                hundred kilometres in altitude, with its properties
+                changing strongly with altitude, solar illumination
+                and geophysical conditions.
+
+            </p>
+
+
+            <p>
+
+                Because the ionosphere contains free electrons and
+                ions, it is highly sensitive to changes in solar
+                radiation and geomagnetic activity.
+
+            </p>
+
+
+            <p>
+
+                In this sense, the ionosphere can be viewed as a
+                natural interface between the space environment and
+                the neutral atmosphere.
+
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+
+                    The ionosphere acts like a giant detector of
+                    activity occurring in the space environment.
+
+                </p>
+
+            </div>
+
+
+            <p>
+
+                A solar disturbance occurring millions of kilometres
+                away can leave measurable signatures in the
+                ionosphere through changes in electron density,
+                ionisation, temperature and electrodynamics.
+
+            </p>
+
+
+
+            <!-- SOLAR FLARE EFFECT -->
+
+            <h2>
+                What Does a Solar Flare Do to the Ionosphere?
+            </h2>
+
+
+            <p>
+
+                A solar flare produces intense electromagnetic
+                radiation across a broad range of wavelengths.
+                Particularly important for the ionosphere are
+                enhanced <strong>X-ray</strong> and
+                <strong>extreme ultraviolet (EUV)</strong> emissions.
+
+            </p>
+
+
+            <p>
+
+                These photons travel from the Sun to Earth at the
+                speed of light. Consequently, the ionospheric
+                response to a flare can begin only a few minutes
+                after the corresponding solar radiation is emitted.
+
+            </p>
+
+
+            <p>
+
+                The additional radiation increases ionisation in
+                the Earth's upper atmosphere. The lower ionosphere,
+                particularly the D-region, can respond rapidly.
+
+            </p>
+
+
+            <p>
+
+                Increased D-region electron density can significantly
+                alter the propagation of radio waves, including
+                VLF and HF signals.
+
+            </p>
+
+
+
+            <!-- CME -->
+
+            <h2>
+                What Does a CME Do?
+            </h2>
+
+
+            <p>
+
+                A <strong>coronal mass ejection</strong> is very
+                different from a solar flare in terms of its
+                physical nature.
+
+            </p>
+
+
+            <p>
+
+                While a flare is primarily an explosive release of
+                electromagnetic radiation, a CME involves the
+                expulsion of a large quantity of magnetised plasma
+                from the solar corona.
+
+            </p>
+
+
+            <p>
+
+                A CME directed toward Earth can take considerably
+                longer to reach our planet than the electromagnetic
+                radiation from the associated solar eruption.
+
+            </p>
+
+
+            <p>
+
+                When the CME reaches Earth, its interaction with
+                the magnetosphere can trigger geomagnetic storms,
+                auroral activity and disturbances in the ionosphere.
+
+            </p>
+
+
+
+            <!-- DIFFERENT TIMESCALES -->
+
+            <h2>
+                Space Weather Happens on Different Timescales
+            </h2>
+
+
+            <p>
+
+                One of the fascinating aspects of space weather is
+                the enormous range of timescales involved.
+
+            </p>
+
+
+            <div class="concept-grid">
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Minutes
+                    </h3>
+
+                    <p>
+
+                        Solar flare radiation can produce rapid
+                        ionospheric changes and radio disturbances.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Hours to Days
+                    </h3>
+
+                    <p>
+
+                        CMEs and solar-wind disturbances can travel
+                        through interplanetary space and interact
+                        with Earth's magnetosphere.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Days to Weeks
+                    </h3>
+
+                    <p>
+
+                        The disturbed magnetosphere and ionosphere
+                        can exhibit prolonged recovery and
+                        variable conditions.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Years
+                    </h3>
+
+                    <p>
+
+                        The approximately eleven-year solar cycle
+                        changes the overall level of solar activity
+                        and space-weather probability.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TECHNOLOGY -->
+
+            <h2>
+                Why Should We Care About Space Weather?
+            </h2>
+
+
+            <p>
+
+                Space weather may sound like something that happens
+                far away from everyday life. In reality, modern
+                technological systems are deeply connected to the
+                near-Earth space environment.
+
+            </p>
+
+
+            <p>
+
+                Strong solar and geomagnetic disturbances can affect
+                radio communication, satellite systems, navigation,
+                spacecraft operations and electrical infrastructure.
+
+            </p>
+
+
+            <div class="concept-grid">
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Radio Communication
+                    </h3>
+
+                    <p>
+
+                        Changes in ionospheric electron density can
+                        alter the propagation of HF and other radio
+                        signals.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Navigation
+                    </h3>
+
+                    <p>
+
+                        Ionospheric disturbances can introduce errors
+                        into GNSS and satellite-navigation systems.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Satellites
+                    </h3>
+
+                    <p>
+
+                        Energetic particles and enhanced atmospheric
+                        drag can affect spacecraft and satellite
+                        operations.
+
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Power Systems
+                    </h3>
+
+                    <p>
+
+                        Strong geomagnetic disturbances can induce
+                        currents in long conducting systems on Earth.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- VLF CONNECTION -->
+
+            <h2>
+                VLF: Listening to Space Weather from the Ground
+            </h2>
+
+
+            <p>
+
+                One does not necessarily need a spacecraft to study
+                space weather.
+
+            </p>
+
+
+            <p>
+
+                Ground-based VLF receivers provide an excellent
+                example. VLF radio signals propagate through the
+                Earth–ionosphere waveguide and are strongly influenced
+                by the lower ionosphere.
+
+            </p>
+
+
+            <p>
+
+                When a solar flare suddenly enhances X-ray radiation,
+                the D-region responds rapidly. The resulting change
+                in electron density and collision conditions modifies
+                the VLF propagation characteristics.
+
+            </p>
+
+
+            <p>
+
+                By continuously monitoring the amplitude and phase of
+                VLF signals, researchers can detect these changes and
+                use them to investigate the response of the lower
+                ionosphere to solar activity.
+
+            </p>
+
+
+            <div class="article-highlight">
+
+                <p>
+
+                    A VLF receiver on Earth can therefore act as a
+                    remote sensor of an atmospheric response to an
+                    event occurring on the Sun.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SOLAR CYCLE -->
+
+            <h2>
+                Space Weather and the Solar Cycle
+            </h2>
+
+
+            <p>
+
+                Space weather does not occur independently of the
+                long-term solar cycle.
+
+            </p>
+
+
+            <p>
+
+                During solar maximum, the Sun generally produces
+                more sunspots and active regions and the frequency
+                of energetic events such as solar flares and CMEs
+                tends to increase.
+
+            </p>
+
+
+            <p>
+
+                Solar minimum represents a comparatively quieter
+                phase, although individual energetic events can still
+                occur.
+
+            </p>
+
+
+            <p>
+
+                Thus, the solar cycle provides the long-term
+                background against which individual space-weather
+                events take place.
+
+            </p>
+
+
+
+            <!-- PREDICTION -->
+
+            <h2>
+                Can Space Weather Be Predicted?
+            </h2>
+
+
+            <p>
+
+                Space-weather prediction is an active area of
+                research. Observations of the Sun, solar wind,
+                interplanetary magnetic field, magnetosphere and
+                ionosphere are combined to understand the evolution
+                of disturbances.
+
+            </p>
+
+
+            <p>
+
+                Solar observatories and spacecraft provide information
+                about active regions, flares, CMEs and the solar
+                wind. Once a disturbance is travelling through
+                interplanetary space, measurements near the Earth
+                can provide information about its properties before
+                or during its interaction with the magnetosphere.
+
+            </p>
+
+
+            <p>
+
+                However, predicting the exact timing, strength and
+                consequences of a space-weather event remains a
+                challenging scientific problem.
+
+            </p>
+
+
+
+            <!-- BIG PICTURE -->
+
+            <h2>
+                The Sun–Earth Connection
+            </h2>
+
+
+            <p>
+
+                Space weather provides one of the clearest examples
+                of the physical connection between the Sun and Earth.
+
+            </p>
+
+
+            <p>
+
+                A magnetic disturbance originating on the Sun can
+                travel through the heliosphere, interact with Earth's
+                magnetosphere, drive geomagnetic activity, disturb
+                the ionosphere and ultimately affect radio signals
+                and technological systems on the ground.
+
+            </p>
+
+
+            <p>
+
+                What makes this particularly fascinating is that the
+                different regions involved are separated by enormous
+                distances, yet they form one connected physical
+                system.
+
+            </p>
+
+
+            <div class="article-note">
+
+                <strong>
+                    From the Sun to a radio receiver:
+                </strong>
+
+                <br><br>
+
+                Solar magnetic activity → solar radiation / solar
+                wind → magnetosphere → ionosphere → radio propagation
+                → measurable signal on Earth.
+
+            </div>
+
+
+
+            <!-- SUMMARY -->
+
+            <h2>
+                In Summary
+            </h2>
+
+
+            <p>
+
+                Space weather describes the changing conditions in
+                near-Earth space driven primarily by solar activity.
+                It encompasses processes occurring from the solar
+                atmosphere and heliosphere to Earth's magnetosphere,
+                ionosphere and upper atmosphere.
+
+            </p>
+
+
+            <p>
+
+                Solar flares can rapidly enhance ionising radiation,
+                while CMEs and solar-wind disturbances can drive
+                geomagnetic storms. The ionosphere responds to these
+                disturbances through changes in electron density,
+                conductivity and electrodynamics.
+
+            </p>
+
+
+            <p>
+
+                These responses are not merely of academic interest.
+                They can influence radio communication, navigation,
+                satellite operations and technological infrastructure.
+
+            </p>
+
+
+            <p>
+
+                For an ionospheric researcher, space weather is
+                therefore both a challenge and an opportunity: the
+                ionosphere provides a measurable response through
+                which we can investigate processes originating far
+                beyond the Earth.
+
+            </p>
+
+
+            <!-- REFERENCES -->
+
+            <h2>
+                References
+            </h2>
+
+
+            <div class="reference">
+
+                <p>
+                    Hathaway, D. H. (2015).
+                    The Solar Cycle.
+                    <em>Living Reviews in Solar Physics.</em>
+                </p>
+
+                <p>
+                    Tsurutani, B. T. et al. (2009).
+                    Global dayside ionospheric effects of solar flares.
+                </p>
+
+                <p>
+                    Pulkkinen, T. (2007).
+                    Space weather: terrestrial perspective.
+                </p>
+
+                <p>
+                    Schunk, R. W. &amp; Nagy, A. F.
+                    Ionospheres: Physics, Plasma Physics, and Chemistry.
+                </p>
+
+                <p>
+                    <strong>Chakraborty, S.</strong> (2026).
+                    PhD Thesis, University of Calcutta.
+                    Material adapted from discussions of solar
+                    activity, ionospheric response and VLF
+                    propagation.
+                </p>
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <div class="article-back">
+
+                <a href="../research-blog.html">
+                    &larr; Back to Research Blog
+                </a>
+
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                &copy; 2026 Sayak Chakraborty
+            </p>
+
+            <p>
+                Space Physics &middot;
+                Ionospheric Science &middot;
+                Solar&ndash;Terrestrial Physics
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
