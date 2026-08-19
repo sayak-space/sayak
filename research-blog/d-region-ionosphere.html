@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        The D-region Ionosphere | Sayak Chakraborty
+    </title>
+
+    <meta name="description"
+          content="An introduction to the D-region ionosphere, its ionization sources, chemistry, variability and importance in VLF radio-wave propagation.">
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+
+        /* =====================================================
+           RESEARCH ARTICLE
+           ===================================================== */
+
+        .article-header {
+
+            background: #f5f7fa;
+
+            border-bottom: 1px solid #e1e6ee;
+
+        }
+
+
+        .article-header-container {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 60px 30px;
+
+        }
+
+
+        .article-category {
+
+            margin-bottom: 10px;
+
+            color: #1479e8;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.6px;
+
+        }
+
+
+        .article-header h1 {
+
+            margin: 0 0 15px 0;
+
+            color: #17365d;
+
+            font-size: 42px;
+
+            line-height: 1.25;
+
+            font-weight: 600;
+
+        }
+
+
+        .article-header p {
+
+            max-width: 800px;
+
+            margin: 0;
+
+            color: #666666;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           ARTICLE BODY
+           ===================================================== */
+
+        .article-container {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 55px 30px 80px 30px;
+
+        }
+
+
+        .article-body {
+
+            color: #3f3f3f;
+
+            font-size: 16px;
+
+            line-height: 1.85;
+
+        }
+
+
+        .article-body p {
+
+            margin: 0 0 22px 0;
+
+        }
+
+
+        .article-body h2 {
+
+            margin: 50px 0 20px 0;
+
+            padding-bottom: 9px;
+
+            border-bottom: 2px solid #d9e2f3;
+
+            color: #17365d;
+
+            font-size: 29px;
+
+            line-height: 1.35;
+
+        }
+
+
+        .article-body h3 {
+
+            margin: 34px 0 13px 0;
+
+            color: #17365d;
+
+            font-size: 21px;
+
+        }
+
+
+        .article-body h4 {
+
+            margin: 28px 0 10px 0;
+
+            color: #17365d;
+
+            font-size: 18px;
+
+        }
+
+
+        .article-body strong {
+
+            color: #303030;
+
+        }
+
+
+        .article-body em {
+
+            color: #444444;
+
+        }
+
+
+        /* =====================================================
+           IONOSPHERE FIGURE
+           ===================================================== */
+
+        .article-figure {
+
+            margin: 38px auto 42px auto;
+
+            text-align: center;
+
+        }
+
+
+        .article-figure img {
+
+            display: block;
+
+            max-width: 100%;
+
+            width: auto;
+
+            max-height: 520px;
+
+            margin: auto;
+
+            border: 1px solid #dfe5ec;
+
+            border-radius: 6px;
+
+            background: #ffffff;
+
+        }
+
+
+        .article-figure figcaption {
+
+            max-width: 750px;
+
+            margin: 12px auto 0 auto;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           EQUATIONS
+           ===================================================== */
+
+        .equation {
+
+            margin: 28px 0;
+
+            padding: 20px;
+
+            overflow-x: auto;
+
+            text-align: center;
+
+            background: #f7f9fc;
+
+            border-left: 3px solid #d9e2f3;
+
+            border-radius: 4px;
+
+            font-size: 17px;
+
+        }
+
+
+        /* =====================================================
+           NOTE BOX
+           ===================================================== */
+
+        .article-note {
+
+            margin: 35px 0;
+
+            padding: 22px 25px;
+
+            background: #f7f9fc;
+
+            border-left: 4px solid #1479e8;
+
+            border-radius: 5px;
+
+            color: #555555;
+
+            font-size: 15px;
+
+            line-height: 1.75;
+
+        }
+
+
+        /* =====================================================
+           BACK LINK
+           ===================================================== */
+
+        .article-back {
+
+            margin-top: 60px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #e1e6ee;
+
+        }
+
+
+        .article-back a {
+
+            color: #1479e8;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+        }
+
+
+        .article-back a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .article-header-container {
+
+                padding:
+                    45px 20px;
+
+            }
+
+
+            .article-header h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .article-container {
+
+                padding:
+                    40px 20px 60px 20px;
+
+            }
+
+
+            .article-body {
+
+                font-size: 15.5px;
+
+            }
+
+
+            .article-body h2 {
+
+                font-size: 26px;
+
+            }
+
+
+            .article-body h3 {
+
+                font-size: 20px;
+
+            }
+
+
+            .article-figure img {
+
+                max-height: none;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+
+            <a href="../index.html"
+               class="site-name">
+
+                Sayak Chakraborty
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="../about.html">
+                    About
+                </a>
+
+                <a href="../research.html">
+                    Research
+                </a>
+
+                <a href="../publications.html">
+                    Publications
+                </a>
+
+                <a href="../talks.html">
+                    Talks &amp; Conferences
+                </a>
+
+                <a href="../blog.html">
+                    Blog
+                </a>
+
+                <a href="../cv.html">
+                    CV
+                </a>
+
+                <a href="../contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         ARTICLE HEADER
+         ===================================================== -->
+
+    <header class="article-header">
+
+        <div class="article-header-container">
+
+            <div class="article-category">
+                Research Blog · Ionospheric Physics
+            </div>
+
+
+            <h1>
+                The D-region Ionosphere
+            </h1>
+
+
+            <p>
+                The lowest region of the ionosphere, where solar
+                radiation, atmospheric chemistry and radio-wave
+                propagation come together.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         ARTICLE CONTENT
+         ===================================================== -->
+
+    <main class="article-container">
+
+        <article class="article-body">
+
+
+            <!-- =================================================
+                 INTRODUCTION
+                 ================================================= -->
+
+            <p>
+
+                The Earth's ionosphere is commonly divided into three
+                principal regions: the <strong>D-region</strong>,
+                <strong>E-region</strong> and <strong>F-region</strong>.
+                Another region, the C-region, exists below the D-region.
+                However, its ionization level is so low that it has
+                little influence on radio signals or communications and
+                is therefore often disregarded as an ionospheric layer.
+
+            </p>
+
+
+            <p>
+
+                Each region of the ionosphere has its own characteristic
+                properties and influences radio-wave propagation in
+                different ways. Their formation and maintenance are also
+                governed by different physical and chemical processes.
+                Understanding these regions individually is therefore
+                important for understanding the behaviour of the
+                ionosphere as a whole.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 FIGURE
+                 ================================================= -->
+
+            <figure class="article-figure">
+
+                <img src="../images/iono_layer.jpg"
+                     alt="Schematic representation of the regions of the ionosphere">
+
+                <figcaption>
+
+                    Schematic representation of the principal regions
+                    of the ionosphere: D-region, E-region and F-region.
+                    The D-region forms the lowest part of the ionosphere.
+
+                </figcaption>
+
+            </figure>
+
+
+
+            <!-- =================================================
+                 D-REGION
+                 ================================================= -->
+
+            <h2>
+                D-region Ionosphere
+            </h2>
+
+
+            <p>
+
+                The D-region is the lowest part of the Earth's
+                ionosphere, extending approximately from
+                <strong>60 km to 80 km</strong> above the Earth's
+                surface. Unlike the higher E- and F-regions, the
+                D-region is characterised by complex ion chemistry and
+                plays an important role in absorbing and modulating
+                <strong>Very Low Frequency (VLF)</strong> and
+                <strong>Low Frequency (LF)</strong> radio waves.
+
+            </p>
+
+
+            <p>
+
+                The region is strongly influenced by solar radiation,
+                particularly extreme ultraviolet (EUV) and soft
+                X-ray photons. These sources initiate a complex
+                combination of ionization, attachment and recombination
+                processes. Although the D-region has a much lower
+                electron density than the upper ionosphere, its
+                dynamical response to solar activity and its distinctive
+                ion chemistry make it an important region for
+                space-weather and atmospheric studies.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 SOURCE OF IONIZATION
+                 ================================================= -->
+
+            <h2>
+                Source of Ionization
+            </h2>
+
+
+            <p>
+
+                Ionization in the D-region is primarily produced by
+                solar <strong>Lyman-alpha (Lα)</strong> radiation,
+                extreme ultraviolet radiation and soft X-rays.
+                During daytime, solar photons interact with neutral
+                atmospheric constituents such as molecular nitrogen
+                (N<sub>2</sub>), molecular oxygen (O<sub>2</sub>) and
+                nitric oxide (NO), producing the primary ionization.
+
+            </p>
+
+
+            <p>
+
+                Nitric oxide is one of the principal constituents in
+                the upper part of the D-region and has an ionization
+                potential of approximately 9.25 eV. Consequently,
+                Lyman-alpha radiation at a wavelength of approximately
+                121.6 nm is particularly important for ionization in
+                the upper D-region.
+
+            </p>
+
+
+            <p>
+
+                At lower altitudes, approximately 60–70 km, solar
+                radiation with wavelengths between about 110 and
+                121.6 nm can penetrate sufficiently to contribute to
+                ionization. Soft X-rays, with wavelengths of roughly
+                1–10 nm, are particularly effective in ionizing N<sub>2</sub>
+                and O<sub>2</sub> at these lower altitudes.
+
+            </p>
+
+
+            <p>
+
+                Other sources can also contribute to D-region
+                ionization. These include cosmic rays and energetic
+                particle precipitation, particularly during
+                geomagnetic disturbances and solar proton events.
+                Such processes can become especially important during
+                nighttime or at high latitudes.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 CHEMISTRY
+                 ================================================= -->
+
+            <h2>
+                Chemistry of the D-region
+            </h2>
+
+
+            <p>
+
+                The ion chemistry of the D-region is distinct from
+                that of the higher ionospheric regions because of its
+                relatively low electron density and high neutral
+                atmospheric density.
+
+            </p>
+
+
+            <p>
+
+                Positive ions found in the region include
+                N<sub>2</sub><sup>+</sup> and O<sub>2</sub><sup>+</sup>,
+                which can be produced through photoionization and
+                charge-exchange processes. NO<sup>+</sup> is another
+                important and relatively stable ion produced through
+                photoionization and subsequent chemical reactions.
+
+            </p>
+
+
+            <p>
+
+                Cluster ions such as
+                H<sub>3</sub>O<sup>+</sup>(H<sub>2</sub>O)<sub>n</sub>
+                can become important below approximately 75 km,
+                particularly under humid conditions.
+
+            </p>
+
+
+            <p>
+
+                One of the distinctive characteristics of the D-region
+                is the presence of <strong>negative ions</strong>.
+                These include O<sup>−</sup>, O<sub>2</sub><sup>−</sup>
+                and NO<sub>2</sub><sup>−</sup>, which can form through
+                electron attachment to electronegative molecules.
+                Cluster ions such as
+                CO<sub>3</sub><sup>−</sup>(H<sub>2</sub>O)<sub>n</sub>
+                and NO<sub>3</sub><sup>−</sup>(H<sub>2</sub>O)<sub>n</sub>
+                may also occur under suitable conditions.
+
+            </p>
+
+
+            <p>
+
+                These negative ions become particularly important when
+                the abundance of free electrons is low, such as during
+                nighttime or periods of low solar activity, and
+                influence the electron-density profile of the D-region.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 RECOMBINATION
+                 ================================================= -->
+
+            <h2>
+                Recombination Processes
+            </h2>
+
+
+            <p>
+
+                The D-region is governed by relatively rapid
+                recombination processes. Two important pathways are
+                dissociative recombination and ion–ion recombination.
+
+            </p>
+
+
+            <h3>
+                Dissociative Recombination
+            </h3>
+
+
+            <div class="equation">
+
+                NO<sup>+</sup> + e<sup>−</sup>
+                &rarr;
+                N + O
+
+            </div>
+
+
+            <h3>
+                Ion–Ion Recombination
+            </h3>
+
+
+            <div class="equation">
+
+                NO<sup>+</sup> + O<sub>2</sub><sup>−</sup>
+                &rarr;
+                NO + O<sub>2</sub>
+
+            </div>
+
+
+            <p>
+
+                These reactions can significantly reduce electron
+                density, particularly during nighttime, and contribute
+                to the strong variability of the D-region.
+
+            </p>
+
+
+            <p>
+
+                In modelling studies, an effective recombination
+                coefficient, <strong>&alpha;<sub>eff</sub></strong>,
+                is often used to represent the combined influence of
+                these processes. Its value depends on altitude,
+                temperature and ion composition.
+
+            </p>
+
+
+            <p>
+
+                The effective recombination coefficient can be
+                expressed as a combination of the dissociative
+                recombination coefficient
+                <strong>&alpha;<sub>d</sub></strong> and the
+                ion–ion recombination coefficient
+                <strong>&alpha;<sub>i</sub></strong>:
+
+            </p>
+
+
+            <div class="equation">
+
+                &alpha;<sub>eff</sub>
+                =
+                &alpha;<sub>d</sub>(1 − &lambda;)
+                +
+                &alpha;<sub>i</sub>&lambda;
+
+            </div>
+
+
+            <p>
+
+                Here, &lambda; represents the relative contribution
+                of negative ions to the ionospheric charge balance.
+                When &lambda; = 0, the expression reduces to purely
+                dissociative recombination. At &lambda; = 1,
+                ion–ion recombination dominates. Intermediate values
+                represent a combination of the two processes.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 DIURNAL AND SEASONAL
+                 ================================================= -->
+
+            <h2>
+                Diurnal and Seasonal Variability
+            </h2>
+
+
+            <p>
+
+                Electron density in the D-region varies strongly with
+                time of day. During daylight hours, solar radiation
+                continuously produces ionization. After sunset,
+                ion production decreases rapidly while recombination
+                and attachment processes continue to remove free
+                electrons.
+
+            </p>
+
+
+            <p>
+
+                Consequently, the D-region electron density can
+                decrease dramatically after sunset and the region
+                becomes much less ionized during nighttime.
+
+            </p>
+
+
+            <p>
+
+                Seasonal variations in solar radiation and atmospheric
+                composition also influence the electron density and
+                ion chemistry. As a whole, the D-region exhibits a
+                strong dependence on the <strong>solar zenith angle</strong>,
+                which describes the position of the Sun relative to
+                the local vertical direction.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 RADIO PROPAGATION
+                 ================================================= -->
+
+            <h2>
+                Importance in Radio-Wave Propagation
+            </h2>
+
+
+            <p>
+
+                One of the most important reasons for studying the
+                D-region is its influence on
+                <strong>VLF and LF radio-wave propagation</strong>.
+                These signals can travel over very large distances
+                through the waveguide formed between the Earth's
+                surface and the lower ionosphere.
+
+            </p>
+
+
+            <p>
+
+                Changes in D-region electron density modify the
+                propagation conditions of these radio waves. During
+                solar flares, enhanced X-ray irradiance can increase
+                the electron density of the D-region, producing
+                measurable changes in VLF signal amplitude and phase.
+
+            </p>
+
+
+            <p>
+
+                These variations form the basis of
+                <strong>VLF remote sensing</strong>, in which
+                measurements of radio signals are used to investigate
+                changes in the lower ionosphere.
+
+            </p>
+
+
+            <div class="article-note">
+
+                <strong>
+                    Why is this important?
+                </strong>
+
+                <br><br>
+
+                The D-region is difficult to observe directly because
+                of its low electron density and its location at the
+                interface between the neutral atmosphere and the
+                ionized upper atmosphere. VLF radio signals therefore
+                provide a particularly useful indirect means of
+                studying how this region responds to solar activity.
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONCLUSION
+                 ================================================= -->
+
+            <h2>
+                In Summary
+            </h2>
+
+
+            <p>
+
+                The D-region may be the lowest and least ionized part
+                of the ionosphere, but it is far from being
+                unimportant. Its complex chemistry, strong response
+                to solar radiation and influence on VLF and LF
+                propagation make it an important component of the
+                Sun–Earth system.
+
+            </p>
+
+
+            <p>
+
+                Understanding how its electron density changes with
+                solar radiation, altitude, time of day and season is
+                therefore essential for understanding both
+                ionospheric physics and the behaviour of
+                sub-ionospheric radio signals.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 BACK TO RESEARCH BLOG
+                 ================================================= -->
+
+            <div class="article-back">
+
+                <a href="../research-blog.html">
+                    ← Back to Research Blog
+                </a>
+
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 Sayak Chakraborty
+            </p>
+
+            <p>
+                Space Physics · Ionospheric Science ·
+                Solar–Terrestrial Physics
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
