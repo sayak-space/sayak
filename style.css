@@ -210,21 +210,15 @@ img {
 }
 
 .section-icon svg {
-    display: block;
-    width: 30px !important;
-    height: 30px !important;
+    width: 30px;
+    height: 30px;
 
-    fill: none !important;
-    stroke: #1479e8 !important;
-    stroke-width: 2.2 !important;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
 
     stroke-linecap: round;
     stroke-linejoin: round;
-}
-
-.section-icon.person-icon svg {
-    width: 31px !important;
-    height: 31px !important;
 }
 
 
@@ -328,13 +322,12 @@ img {
 }
 
 .research-symbol svg {
-    display: block;
-    width: 32px !important;
-    height: 32px !important;
+    width: 32px;
+    height: 32px;
 
-    fill: none !important;
-    stroke: #ffffff !important;
-    stroke-width: 2 !important;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
 
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -361,6 +354,32 @@ img {
 
     font-size: 14px;
     font-weight: 600;
+}
+
+
+/* =========================================================
+   RESEARCH COVER BANNER
+   ========================================================= */
+
+.research-cover-section {
+    width: 100%;
+    margin: 0 0 55px 0;
+
+    overflow: hidden;
+    border-radius: 10px;
+
+    background: #07101f;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.research-cover-section img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
 }
 
 
